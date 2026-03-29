@@ -1,4 +1,5 @@
-![kymco_agility_k_line_ai_system_architecture](https://github.com/user-attachments/assets/290d381e-502d-41b5-8248-4408b4e6f5f6)# moto
+![kymco_agility_k_line_ai_system_architecture](https://github.com/user-attachments/assets/290d381e-502d-41b5-8248-4408b4e6f5f6)
+# moto
 This is a fantastic project — basically building a **predictive maintenance system** for a 50cc scooter. Let me architect the whole thing properly.Hadchi is a seriously smart project — basically building a **scooter health intelligence platform**. Let me architect the whole system from the ECU wire to the notification on your phone.
 
 ![Uploadin<svg width="100%" viewBox="0 0 680 720" xmlns="http://www.w3.org/2000/svg">
