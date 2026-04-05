@@ -1,0 +1,356 @@
+/* ===== Kymco Agility 50 4T — Marrakech Maintenance Wiki ===== */
+
+:root {
+  --bg: #1a1a2e;
+  --bg-card: #16213e;
+  --bg-card-alt: #0f3460;
+  --accent: #e94560;
+  --accent-warm: #f5a623;
+  --accent-green: #27ae60;
+  --accent-blue: #3498db;
+  --text: #e0e0e0;
+  --text-muted: #8899aa;
+  --text-heading: #ffffff;
+  --border: #2a2a4a;
+  --danger: #e74c3c;
+  --warning: #f39c12;
+  --success: #2ecc71;
+  --info: #3498db;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* ---- Navigation ---- */
+nav {
+  background: var(--bg-card);
+  border-bottom: 2px solid var(--accent);
+  padding: 0 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+nav .logo {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--accent);
+  padding: 1rem 0;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+nav .logo span {
+  color: var(--text-muted);
+  font-weight: 400;
+  font-size: 0.85rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 0.25rem;
+  flex-wrap: wrap;
+}
+
+nav ul li a {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.9rem;
+  border-radius: 6px 6px 0 0;
+  transition: all 0.2s;
+}
+
+nav ul li a:hover {
+  color: var(--text);
+  background: rgba(233, 69, 96, 0.1);
+}
+
+nav ul li a.active {
+  color: var(--accent);
+  background: var(--bg);
+  font-weight: 600;
+}
+
+/* ---- Main Content ---- */
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+
+h1 {
+  color: var(--text-heading);
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 0.5rem;
+}
+
+h2 {
+  color: var(--accent);
+  font-size: 1.4rem;
+  margin: 2rem 0 1rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid var(--border);
+}
+
+h3 {
+  color: var(--accent-warm);
+  font-size: 1.1rem;
+  margin: 1.5rem 0 0.75rem;
+}
+
+p { margin-bottom: 1rem; }
+
+.subtitle {
+  color: var(--text-muted);
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* ---- Cards ---- */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.25rem;
+  margin: 1.5rem 0;
+}
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.5rem;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent);
+}
+
+.card h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.card a {
+  display: inline-block;
+  margin-top: 0.75rem;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.card a:hover { text-decoration: underline; }
+
+/* ---- Badges ---- */
+.badge {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.badge-danger  { background: rgba(231,76,60,0.2); color: var(--danger); }
+.badge-warning { background: rgba(243,156,18,0.2); color: var(--warning); }
+.badge-success { background: rgba(46,204,113,0.2); color: var(--success); }
+.badge-info    { background: rgba(52,152,219,0.2); color: var(--info); }
+
+/* ---- Tables ---- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0 2rem;
+  font-size: 0.92rem;
+}
+
+thead {
+  background: var(--bg-card-alt);
+}
+
+th {
+  color: var(--text-heading);
+  font-weight: 600;
+  text-align: left;
+  padding: 0.75rem 1rem;
+  border-bottom: 2px solid var(--accent);
+}
+
+td {
+  padding: 0.65rem 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+tr:hover { background: rgba(233, 69, 96, 0.05); }
+
+/* ---- Alert / Callout boxes ---- */
+.callout {
+  border-left: 4px solid;
+  border-radius: 6px;
+  padding: 1rem 1.25rem;
+  margin: 1.25rem 0;
+  font-size: 0.92rem;
+}
+
+.callout-danger  { border-color: var(--danger);  background: rgba(231,76,60,0.08); }
+.callout-warning { border-color: var(--warning); background: rgba(243,156,18,0.08); }
+.callout-success { border-color: var(--success); background: rgba(46,204,113,0.08); }
+.callout-info    { border-color: var(--info);    background: rgba(52,152,219,0.08); }
+
+.callout strong {
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+/* ---- Steps / Procedure lists ---- */
+.steps {
+  counter-reset: step;
+  list-style: none;
+  padding: 0;
+}
+
+.steps li {
+  counter-increment: step;
+  position: relative;
+  padding: 0.75rem 0 0.75rem 3rem;
+  border-left: 2px solid var(--border);
+  margin-left: 1rem;
+}
+
+.steps li::before {
+  content: counter(step);
+  position: absolute;
+  left: -0.85rem;
+  top: 0.65rem;
+  width: 1.7rem;
+  height: 1.7rem;
+  background: var(--accent);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+
+.steps li:last-child { border-left-color: transparent; }
+
+/* ---- Specs / Key-value list ---- */
+.spec-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 0.5rem 2rem;
+  margin: 1rem 0;
+}
+
+.spec-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px dotted var(--border);
+}
+
+.spec-item .label { color: var(--text-muted); }
+.spec-item .value { color: var(--text-heading); font-weight: 600; }
+
+/* ---- Oil diagram ---- */
+.oil-diagram {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.oil-box {
+  border: 2px solid;
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.oil-box.engine  { border-color: var(--accent); background: rgba(233,69,96,0.06); }
+.oil-box.gearbox { border-color: var(--accent-blue); background: rgba(52,152,219,0.06); }
+
+.oil-box h3 { margin-top: 0; }
+
+.oil-box .oil-type {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin: 0.5rem 0;
+}
+
+.oil-box.engine .oil-type  { color: var(--accent); }
+.oil-box.gearbox .oil-type { color: var(--accent-blue); }
+
+/* ---- Risk meter ---- */
+.risk-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.25rem 0;
+}
+
+.risk-bar .bar {
+  flex: 1;
+  height: 8px;
+  background: var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.risk-bar .bar .fill {
+  height: 100%;
+  border-radius: 4px;
+}
+
+.risk-high   .fill { width: 90%; background: var(--danger); }
+.risk-medium .fill { width: 60%; background: var(--warning); }
+.risk-low    .fill { width: 30%; background: var(--success); }
+
+/* ---- Footer ---- */
+footer {
+  text-align: center;
+  padding: 2rem;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  border-top: 1px solid var(--border);
+  margin-top: 3rem;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) {
+  nav { padding: 0 1rem; gap: 0.5rem; }
+  nav .logo { font-size: 1rem; }
+  nav ul li a { padding: 0.5rem 0.6rem; font-size: 0.8rem; }
+  main { padding: 1.5rem 1rem; }
+  h1 { font-size: 1.5rem; }
+  .oil-diagram { grid-template-columns: 1fr; }
+  .card-grid { grid-template-columns: 1fr; }
+}
+
+/* ---- Print ---- */
+@media print {
+  nav { display: none; }
+  body { background: #fff; color: #000; }
+  .card { border: 1px solid #ccc; }
+}
