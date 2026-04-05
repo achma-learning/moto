@@ -6,26 +6,17 @@
   <title>How-To Guides — Kymco Agility 50 4T Wiki</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="guides-page">
 
-<nav>
-  <a class="logo" href="../index.html">Kymco Agility 50 4T <span>Marrakech Wiki</span></a>
-  <ul>
-    <li><a href="../index.html">Home</a></li>
-    <li><a href="maintenance.html">Maintenance</a></li>
-    <li><a href="oil-systems.html">Oil Systems</a></li>
-    <li><a href="failure-modes.html">Failure Modes</a></li>
-    <li><a href="guides.html" class="active">Guides</a></li>
-    <li><a href="specs.html">Specs</a></li>
-  </ul>
-</nav>
+<nav id="nav"></nav>
+<script src="nav.js"></script>
 
 <main>
   <h1>How-To Guides</h1>
   <p class="subtitle">Step-by-step procedures for the most common maintenance tasks. Always work on a cold engine unless noted otherwise.</p>
 
   <!-- ==================== GUIDE 1: ENGINE OIL ==================== -->
-  <h2>Engine Oil Change</h2>
+  <h2 id="engine-oil-change">Engine Oil Change</h2>
   <p><strong>Interval:</strong> Every 1,500 km &nbsp;|&nbsp; <strong>Time:</strong> ~15 minutes &nbsp;|&nbsp; <strong>Difficulty:</strong> Easy</p>
 
   <h3>What You Need</h3>
@@ -44,7 +35,7 @@
     <li><strong>Remove drain plug</strong> — 17 mm bolt on the bottom-right of the crankcase. Careful, oil will be warm. Let it drain fully (3-5 minutes).</li>
     <li><strong>Inspect the drain plug washer</strong> — Replace the copper crush washer every time. They're cheap insurance against leaks.</li>
     <li><strong>Reinstall drain plug</strong> — Hand-tight plus 1/4 turn with wrench. Do NOT over-torque — the crankcase is aluminum and strips easily. Torque spec: ~25 Nm.</li>
-    <li><strong>Fill with new oil</strong> — Pour ~700 ml through the dipstick hole using a funnel. Check level with dipstick (don't screw it in to check — just rest it). Top up to between the two marks. Total capacity: ~750-800 ml.</li>
+    <li><strong>Fill with new oil</strong> — Pour ~700 ml through the dipstick hole using a funnel. Check level with dipstick (don't screw it in to check — just rest it). Top up to between the two marks. Capacity: 700 ml at oil change, 800 ml at full disassembly.</li>
     <li><strong>Run engine for 30 seconds</strong> — Let it idle to circulate oil. Shut off, wait 1 minute, recheck level. Top up if needed.</li>
     <li><strong>Check for leaks</strong> — Wipe the drain plug area clean and look for drips after a short ride.</li>
   </ol>
@@ -55,7 +46,7 @@
   </div>
 
   <!-- ==================== GUIDE 2: GEAR OIL ==================== -->
-  <h2>Transmission Gear Oil Change</h2>
+  <h2 id="gear-oil-change">Transmission Gear Oil Change</h2>
   <p><strong>Interval:</strong> 1,000 km (first), then every 10,000 km &nbsp;|&nbsp; <strong>Time:</strong> ~10 minutes &nbsp;|&nbsp; <strong>Difficulty:</strong> Easy</p>
 
   <h3>What You Need</h3>
@@ -73,13 +64,13 @@
     <li><strong>Remove the fill/check bolt first</strong> — Upper bolt on the left gear case cover. This lets air in and confirms you can fill before you drain.</li>
     <li><strong>Remove drain plug</strong> — Lower bolt, 12 mm. Let all oil drain (~2 minutes). Note: the volume is small (~120-150 ml), so it drains quickly.</li>
     <li><strong>Inspect old oil</strong> — Should be dark amber. If metallic gray or has visible shavings, inspect gears.</li>
-    <li><strong>Reinstall drain plug</strong> — New aluminum washer. Torque: ~15 Nm. Don't over-tighten.</li>
+    <li><strong>Reinstall drain plug</strong> — New aluminum washer. Torque: 8-12 Nm (workshop manual: 0.8-1.2 kgf&middot;m). Don't over-tighten.</li>
     <li><strong>Fill through the check bolt hole</strong> — Use a syringe or squeeze bottle. Fill until oil just starts to seep from the check hole with the bike upright. This is the correct level.</li>
     <li><strong>Reinstall fill/check bolt</strong> — New washer, snug tight.</li>
   </ol>
 
   <!-- ==================== GUIDE 3: AIR FILTER ==================== -->
-  <h2>Air Filter Service</h2>
+  <h2 id="air-filter-service">Air Filter Service</h2>
   <p><strong>Interval:</strong> Clean every 3,000 km, replace every 6,000 km &nbsp;|&nbsp; <strong>Time:</strong> ~10 minutes &nbsp;|&nbsp; <strong>Difficulty:</strong> Easy</p>
 
   <h3>Procedure</h3>
@@ -99,7 +90,7 @@
   </div>
 
   <!-- ==================== GUIDE 4: TIRE PRESSURE ==================== -->
-  <h2>Tire Pressure Check</h2>
+  <h2 id="tire-pressure-check">Tire Pressure Check</h2>
   <p><strong>Interval:</strong> Weekly &nbsp;|&nbsp; <strong>Time:</strong> ~2 minutes &nbsp;|&nbsp; <strong>Difficulty:</strong> Trivial</p>
 
   <h3>Why Weekly in Marrakech</h3>
@@ -110,7 +101,7 @@
     <li><strong>Check when cold</strong> — Before riding, or at least 30 minutes after riding. Heat increases pressure by 2-4 PSI.</li>
     <li><strong>Use a quality gauge</strong> — Pencil gauges are inaccurate. A digital gauge costs 30-50 DHS and is worth it.</li>
     <li><strong>Front tire:</strong> Inflate to <strong>1.75 bar (25 PSI)</strong></li>
-    <li><strong>Rear tire:</strong> Inflate to <strong>2.25 bar (32 PSI)</strong> — higher because it carries more weight.</li>
+    <li><strong>Rear tire:</strong> Inflate to <strong>2.0 bar (29 PSI)</strong> solo, or <strong>2.25 bar (32 PSI)</strong> with a passenger.</li>
     <li><strong>Check valve stems</strong> — Ensure caps are on. Look for cracking or air leaks at the valve base.</li>
   </ol>
 
@@ -120,7 +111,7 @@
   </div>
 
   <!-- ==================== GUIDE 5: CARB CLEANING ==================== -->
-  <h2>Carburetor Pilot Jet Cleaning</h2>
+  <h2 id="carburetor-pilot-jet-cleaning">Carburetor Pilot Jet Cleaning</h2>
   <p><strong>Interval:</strong> Every 3,000 km or at first idle symptoms &nbsp;|&nbsp; <strong>Time:</strong> ~30-45 minutes &nbsp;|&nbsp; <strong>Difficulty:</strong> Medium</p>
 
   <h3>What You Need</h3>
@@ -153,7 +144,7 @@
   </div>
 
   <!-- ==================== GUIDE 6: CVT INSPECTION ==================== -->
-  <h2>CVT Belt & Roller Inspection</h2>
+  <h2 id="cvt-belt-roller-inspection">CVT Belt &amp; Roller Inspection</h2>
   <p><strong>Interval:</strong> Every 5,000 km &nbsp;|&nbsp; <strong>Time:</strong> ~30 minutes &nbsp;|&nbsp; <strong>Difficulty:</strong> Medium</p>
 
   <h3>What You Need</h3>
@@ -182,7 +173,7 @@
   </div>
 
   <!-- ==================== GUIDE 7: BRAKE CALIPER ==================== -->
-  <h2>Brake Caliper Piston Service</h2>
+  <h2 id="brake-caliper-service">Brake Caliper Piston Service</h2>
   <p><strong>Interval:</strong> Every 6,000 km &nbsp;|&nbsp; <strong>Time:</strong> ~20 minutes &nbsp;|&nbsp; <strong>Difficulty:</strong> Medium</p>
 
   <h3>Procedure</h3>
@@ -197,10 +188,97 @@
     <li><strong>Reinstall pads and caliper</strong> — Pump brake lever a few times to reset pad position before riding.</li>
   </ol>
 
+  <!-- ==================== GUIDE 8: THROTTLE CABLE ==================== -->
+  <h2 id="throttle-cable-lubrication">Throttle Cable Lubrication</h2>
+  <p><strong>Interval:</strong> Every 5,000 km &nbsp;|&nbsp; <strong>Time:</strong> ~15 minutes &nbsp;|&nbsp; <strong>Difficulty:</strong> Easy</p>
+
+  <h3>Why It Matters</h3>
+  <p>Marrakech dust and heat dry out the cable's inner liner. A stiff cable causes jerky throttle response and, in the worst case, cable snap — which means you lose throttle control while riding.</p>
+
+  <h3>What You Need</h3>
+  <ul style="margin: 0.5rem 0 1rem 1.5rem;">
+    <li>Cable lubricant spray (or light machine oil)</li>
+    <li>Cable luber tool (optional — makes it much easier)</li>
+    <li>Rags</li>
+  </ul>
+
+  <h3>Procedure</h3>
+  <ol class="steps">
+    <li><strong>Disconnect the throttle cable at the carburetor end</strong> — Loosen the adjuster locknut and slip the cable out of the carburetor throttle lever.</li>
+    <li><strong>Position the cable vertically</strong> — Hold the carb end up so gravity helps the lubricant flow down.</li>
+    <li><strong>Apply lubricant</strong> — If using a cable luber tool, clamp it onto the cable end and spray lubricant in. If not, drip light oil into the cable sheath from the top. Let it soak through.</li>
+    <li><strong>Work the cable</strong> — Pull the inner cable in and out several times to distribute lubricant through the entire length.</li>
+    <li><strong>Reconnect</strong> — Reattach cable to carburetor. Adjust free play: 2-6 mm at the grip. Throttle should snap closed when released.</li>
+    <li><strong>Test</strong> — Turn handlebars full left and right. Throttle should not change RPM in either position. If it does, the cable is too tight or routed incorrectly.</li>
+  </ol>
+
+  <div class="callout callout-warning">
+    <strong>Check Free Play After Lubrication</strong>
+    Fresh lubricant can change cable tension slightly. Always verify 2-6 mm free play at the throttle grip. Too little free play = throttle may not fully close = dangerous.
+  </div>
+
+  <!-- ==================== GUIDE 9: SPARK PLUG READING ==================== -->
+  <h2 id="spark-plug-reading">Spark Plug Reading</h2>
+  <p><strong>When:</strong> At every spark plug inspection/change &nbsp;|&nbsp; <strong>Time:</strong> ~5 minutes &nbsp;|&nbsp; <strong>Difficulty:</strong> Easy</p>
+
+  <h3>Why Read the Plug</h3>
+  <p>The spark plug electrode color tells you how the engine is running. It's a free diagnostic tool — the combustion process leaves visible evidence on the plug.</p>
+
+  <h3>Procedure</h3>
+  <ol class="steps">
+    <li><strong>Remove the spark plug</strong> — Use a spark plug socket. Pull the plug cap straight off (don't twist it).</li>
+    <li><strong>Examine the electrode and insulator nose</strong> — Look at the center electrode tip and the white ceramic insulator around it.</li>
+    <li><strong>Compare to the chart below</strong> — Identify the condition and take action if needed.</li>
+  </ol>
+
+  <h3>Color Chart</h3>
+  <table>
+    <thead>
+      <tr><th>Color / Appearance</th><th>Meaning</th><th>Action</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Light tan / light brown</strong></td>
+        <td><span class="badge badge-success">Ideal</span> — Correct mixture, proper combustion</td>
+        <td>No action needed. This is what you want to see.</td>
+      </tr>
+      <tr>
+        <td><strong>White / light gray / blistered</strong></td>
+        <td><span class="badge badge-danger">Too lean</span> — Not enough fuel or too much air</td>
+        <td>Check for vacuum leaks (intake manifold), clogged fuel filter, air filter missing/damaged. In Marrakech at 460 m altitude, mild lean is normal — only worry if electrode is blistered or melted.</td>
+      </tr>
+      <tr>
+        <td><strong>Dark brown / black / sooty (dry)</strong></td>
+        <td><span class="badge badge-warning">Too rich</span> — Too much fuel or not enough air</td>
+        <td>Check air filter (clogged = rich). Check choke (stuck partially on). If persistent, pilot jet or main jet may be oversized for altitude.</td>
+      </tr>
+      <tr>
+        <td><strong>Black and wet / oily</strong></td>
+        <td><span class="badge badge-danger">Oil fouling</span> — Oil entering combustion chamber</td>
+        <td>Likely worn valve guides or piston rings. Check oil consumption. If burning &gt;100 ml per 1,000 km, internal engine wear is significant.</td>
+      </tr>
+      <tr>
+        <td><strong>Heavy deposits / crusty</strong></td>
+        <td><span class="badge badge-warning">Carbon fouling</span> — Incomplete combustion buildup</td>
+        <td>Usually from excessive idling, short trips, or running too rich for too long. Clean or replace plug. Investigate root cause.</td>
+      </tr>
+      <tr>
+        <td><strong>Electrode worn / rounded</strong></td>
+        <td><span class="badge badge-info">Normal wear</span> — End of plug life</td>
+        <td>Replace spark plug. Check gap before installing new plug: 0.6-0.7 mm for NGK CR7HSA.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="callout callout-info">
+    <strong>Marrakech Altitude Effect</strong>
+    At 460 m elevation with 40&deg;C+ ambient, air is thinner than the sea-level European conditions the carburetor was jetted for. A slightly lean reading (light tan rather than brown) is normal here and doesn't require action unless you see blistering.
+  </div>
+
 </main>
 
 <footer>
-  Kymco Agility 50 4T — Marrakech Maintenance Wiki &bull; Durability over performance
+  Kymco Agility 50 4T — Marrakech Maintenance Wiki &bull; Last updated: <time datetime="2026-04">April 2026</time>
 </footer>
 
 </body>

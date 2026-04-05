@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pre-Ride Checklist — Kymco Agility 50 4T Wiki</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .checklist { list-style: none; padding: 0; }
+    .checklist li {
+      padding: 0.6rem 0 0.6rem 2.5rem;
+      position: relative;
+      border-bottom: 1px solid var(--border);
+    }
+    .checklist li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.7rem;
+      width: 1.4rem;
+      height: 1.4rem;
+      border: 2px solid var(--text-muted);
+      border-radius: 4px;
+      background: transparent;
+    }
+    @media print {
+      body { background: #fff; color: #000; font-size: 11pt; }
+      nav, footer, .no-print { display: none; }
+      main { padding: 0.5cm; max-width: 100%; }
+      h1 { font-size: 16pt; color: #000; border-color: #000; }
+      h2 { font-size: 13pt; color: #333; border-color: #999; }
+      h3 { font-size: 11pt; color: #555; }
+      .callout { border-color: #999; background: #f5f5f5; color: #000; }
+      .callout strong { color: #000; }
+      .checklist li { border-color: #ccc; color: #000; }
+      .checklist li::before { border-color: #333; }
+      .badge { border: 1px solid #999; background: transparent; color: #333; }
+    }
+  </style>
+</head>
+<body>
+
+<nav id="nav"></nav>
+<script src="nav.js"></script>
+
+<main>
+  <h1>Pre-Ride Checklist</h1>
+  <p class="subtitle">Run through this before every ride. Print this page for a garage-friendly reference (Ctrl+P).</p>
+
+  <div class="callout callout-info no-print">
+    <strong>Print-Friendly</strong>
+    This page is designed to fit on one A4 sheet when printed. Use Ctrl+P (or Cmd+P on Mac) to print a copy for your garage.
+  </div>
+
+  <h2 id="every-ride">Every Ride <span class="badge badge-danger">Critical</span></h2>
+  <ul class="checklist">
+    <li><strong>Engine oil level</strong> — Dipstick check, bike upright on center stand. Between the two marks.</li>
+    <li><strong>Tire pressure (visual)</strong> — Tires should look properly inflated, not flat or bulging. Gauge check weekly.</li>
+    <li><strong>Front brake lever</strong> — Firm feel, no sponge. Should engage within first 1/3 of lever travel.</li>
+    <li><strong>Rear brake</strong> — 10-20 mm free play at pedal before engagement.</li>
+    <li><strong>Lights &amp; signals</strong> — Headlight (low/high), tail light, brake light (both levers), turn signals.</li>
+    <li><strong>Fuel level</strong> — Check gauge or open cap. Don't ride on fumes — sediment gets sucked into carb.</li>
+    <li><strong>Throttle free play</strong> — 2-6 mm of slack before cable engages. Throttle should snap closed when released.</li>
+    <li><strong>Mirrors</strong> — Adjusted and tight. Vibration loosens them over time.</li>
+    <li><strong>Center stand / side stand</strong> — Retracts fully and stays up while riding.</li>
+  </ul>
+
+  <h2 id="weekly">Weekly Checks</h2>
+  <ul class="checklist">
+    <li><strong>Tire pressure with gauge</strong> — Front: 1.75 bar (25 PSI). Rear: 2.0 bar solo / 2.25 bar with passenger. Check cold.</li>
+    <li><strong>Tire condition</strong> — Tread depth &ge;1 mm, no sidewall cracks, no embedded debris.</li>
+    <li><strong>Cooling fins</strong> — Clean and unblocked. Brush off dust and debris from cylinder fins.</li>
+    <li><strong>Battery voltage</strong> — &gt;12.4V at rest (multimeter on battery terminals, engine off).</li>
+    <li><strong>Under-seat area</strong> — Check for water ingress, loose items, or rodent damage to wiring.</li>
+    <li><strong>Chain/drive inspection</strong> — Listen for unusual noises from CVT area on short test ride.</li>
+  </ul>
+
+  <h2 id="marrakech">Marrakech-Specific</h2>
+  <ul class="checklist">
+    <li><strong>Summer (May-Sep):</strong> Check cooling fin blockage more frequently — dust and debris accumulate fast in 40&deg;C+ heat.</li>
+    <li><strong>After dust storms:</strong> Inspect air filter immediately. Heavy dust events can clog the filter in a single day.</li>
+    <li><strong>Bike sat &gt;2 weeks:</strong> Drain carburetor float bowl before restart (float bowl drain screw at bottom of carb). Stale fuel varnishes the pilot jet.</li>
+    <li><strong>Rainy season (Oct-Mar):</strong> Check brake performance after rain — disc brakes need a few pumps to dry. Inspect for rust on disc surface.</li>
+  </ul>
+
+  <div class="callout callout-warning">
+    <strong>If Anything Feels Wrong, Don't Ride</strong>
+    Spongy brakes, unusual engine noise, steering wobble, or fluid leaks all warrant investigation before riding. A 10-minute check prevents roadside breakdowns in Marrakech traffic.
+  </div>
+
+</main>
+
+<footer>
+  Kymco Agility 50 4T — Marrakech Maintenance Wiki &bull; Last updated: April 2026
+</footer>
+
+</body>
+</html>

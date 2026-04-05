@@ -8,17 +8,8 @@
 </head>
 <body>
 
-<nav>
-  <a class="logo" href="../index.html">Kymco Agility 50 4T <span>Marrakech Wiki</span></a>
-  <ul>
-    <li><a href="../index.html">Home</a></li>
-    <li><a href="maintenance.html" class="active">Maintenance</a></li>
-    <li><a href="oil-systems.html">Oil Systems</a></li>
-    <li><a href="failure-modes.html">Failure Modes</a></li>
-    <li><a href="guides.html">Guides</a></li>
-    <li><a href="specs.html">Specs</a></li>
-  </ul>
-</nav>
+<nav id="nav"></nav>
+<script src="nav.js"></script>
 
 <main>
   <h1>Maintenance Schedule</h1>
@@ -30,7 +21,7 @@
   </div>
 
   <!-- Tires -->
-  <h2>Tires</h2>
+  <h2 id="tires">Tires</h2>
   <table>
     <thead>
       <tr>
@@ -45,7 +36,7 @@
         <td><strong>Tire pressure check</strong></td>
         <td><span class="badge badge-danger">Weekly</span></td>
         <td>Monthly</td>
-        <td>Front: 1.75 bar (25 PSI), Rear: 2.25 bar (32 PSI). Check cold. Marrakech temperature swings cause significant pressure fluctuation.</td>
+        <td>Front: 1.75 bar (25 PSI). Rear: 2.0 bar solo (29 PSI), 2.25 bar with passenger (32 PSI). Check cold. Marrakech temperature swings cause significant pressure fluctuation.</td>
       </tr>
       <tr>
         <td><strong>Tire condition inspection</strong></td>
@@ -57,7 +48,7 @@
   </table>
 
   <!-- Engine Oil -->
-  <h2>Engine Oil — 10W-40</h2>
+  <h2 id="engine-oil">Engine Oil — 10W-40</h2>
   <table>
     <thead>
       <tr>
@@ -84,7 +75,7 @@
   </table>
 
   <!-- Transmission Oil -->
-  <h2>Transmission Gear Oil — 80W-90</h2>
+  <h2 id="gear-oil">Transmission Gear Oil — 80W-90</h2>
   <table>
     <thead>
       <tr>
@@ -111,7 +102,7 @@
   </table>
 
   <!-- Air & Fuel -->
-  <h2>Air & Fuel System</h2>
+  <h2 id="air-fuel">Air &amp; Fuel System</h2>
   <table>
     <thead>
       <tr>
@@ -156,7 +147,7 @@
   </table>
 
   <!-- CVT & Drivetrain -->
-  <h2>CVT & Drivetrain</h2>
+  <h2 id="cvt">CVT &amp; Drivetrain</h2>
   <table>
     <thead>
       <tr>
@@ -195,7 +186,7 @@
   </table>
 
   <!-- Valve Train -->
-  <h2>Valve Train</h2>
+  <h2 id="valve-train">Valve Train</h2>
   <table>
     <thead>
       <tr>
@@ -210,13 +201,13 @@
         <td><strong>Valve clearance — check & adjust</strong></td>
         <td><span class="badge badge-warning">Every 4,000 km</span></td>
         <td>Every 8,000 km</td>
-        <td>Intake: 0.10 mm, Exhaust: 0.15 mm (cold). Valve guides wear faster in heat — listen for ticking.</td>
+        <td>IN: 0.08 mm, EX: 0.08 mm (cold). Both valves equal clearance. Valve guides wear faster in heat — listen for ticking.</td>
       </tr>
     </tbody>
   </table>
 
   <!-- Brakes -->
-  <h2>Brakes</h2>
+  <h2 id="brakes">Brakes</h2>
   <table>
     <thead>
       <tr>
@@ -249,7 +240,7 @@
   </table>
 
   <!-- Electrical -->
-  <h2>Electrical</h2>
+  <h2 id="electrical">Electrical</h2>
   <table>
     <thead>
       <tr>
@@ -283,7 +274,7 @@
 </main>
 
 <footer>
-  Kymco Agility 50 4T — Marrakech Maintenance Wiki &bull; Durability over performance
+  Kymco Agility 50 4T — Marrakech Maintenance Wiki &bull; Last updated: <time datetime="2026-04">April 2026</time>
 </footer>
 
 </body>
