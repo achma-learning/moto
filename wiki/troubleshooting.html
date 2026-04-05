@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Troubleshooting — Kymco Agility 50 4T Wiki</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .flow-tree { list-style: none; padding: 0; margin: 1rem 0; }
+    .flow-tree li {
+      padding: 0.6rem 0.8rem 0.6rem 1.5rem;
+      margin: 0.25rem 0;
+      border-left: 3px solid var(--border);
+      position: relative;
+    }
+    .flow-tree li::before {
+      content: '\2192';
+      position: absolute;
+      left: 0.3rem;
+      color: var(--accent);
+      font-weight: bold;
+    }
+    .flow-tree .question {
+      color: var(--accent-warm);
+      font-weight: 600;
+    }
+    .flow-tree .answer-yes {
+      border-left-color: var(--success);
+    }
+    .flow-tree .answer-no {
+      border-left-color: var(--danger);
+    }
+    .flow-tree .solution {
+      background: rgba(46, 204, 113, 0.08);
+      border-left-color: var(--success);
+      border-radius: 0 6px 6px 0;
+    }
+    .flow-tree .problem {
+      background: rgba(231, 76, 60, 0.08);
+      border-left-color: var(--danger);
+      border-radius: 0 6px 6px 0;
+    }
+    @media print {
+      body { background: #fff; color: #000; }
+      nav, footer { display: none; }
+      h2 { page-break-before: always; color: #333; }
+      h2:first-of-type { page-break-before: auto; }
+      .flow-tree li { border-left-color: #999; }
+      .flow-tree .solution { background: #f0f0f0; }
+      .flow-tree .problem { background: #f5f0f0; }
+    }
+  </style>
+</head>
+<body>
+
+<nav id="nav"></nav>
+<script src="nav.js"></script>
+
+<main>
+  <h1>Troubleshooting</h1>
+  <p class="subtitle">Decision trees for common problems. Follow the arrows to diagnose the issue step by step.</p>
+
+  <!-- Flowchart 1: Engine Won't Start -->
+  <h2 id="wont-start">Engine Won't Start</h2>
+
+  <ul class="flow-tree">
+    <li class="question">Is the kill switch in the RUN position?</li>
+    <li class="answer-no"><strong>No</strong> &rarr; Flip kill switch to RUN. Try again.</li>
+    <li class="answer-yes"><strong>Yes</strong> &rarr; Continue below.</li>
+  </ul>
+
+  <ul class="flow-tree">
+    <li class="question">Is battery voltage &gt;12.4V? (Check with multimeter at battery terminals, engine off)</li>
+    <li class="answer-no"><strong>No (below 12.4V)</strong> &rarr; Battery is dead or weak.</li>
+    <li class="solution">Charge battery. If it won't hold charge &rarr; replace. Check charging system when running (&gt;13V).</li>
+    <li class="answer-yes"><strong>Yes (&gt;12.4V)</strong> &rarr; Continue below.</li>
+  </ul>
+
+  <ul class="flow-tree">
+    <li class="question">Does the starter motor crank? (Key ON, press start button)</li>
+    <li class="answer-no"><strong>No crank at all / just a click</strong></li>
+    <li class="problem">Check: fuse, starter relay, starter motor connections, side stand switch (must be up), brake lever (some models require brake held). If all OK &rarr; starter motor brushes worn or motor seized.</li>
+    <li class="answer-yes"><strong>Yes, cranks normally</strong> &rarr; Continue below.</li>
+  </ul>
+
+  <ul class="flow-tree">
+    <li class="question">Does the engine fire briefly then die?</li>
+    <li class="answer-yes"><strong>Yes &mdash; fires but won't stay running</strong></li>
+    <li class="problem"><strong>Fuel issue:</strong> Check fuel level. Verify fuel reaches carb (disconnect fuel line at carb &mdash; fuel should drip when petcock is open). If fuel reaches carb &rarr; pilot jet is likely clogged. <a href="guides.html#carburetor-pilot-jet-cleaning" style="color:var(--accent);">Clean pilot jet &rarr;</a></li>
+    <li class="answer-no"><strong>No &mdash; cranks but never fires</strong></li>
+    <li class="problem"><strong>Ignition issue:</strong> Remove spark plug. Ground electrode against cylinder head. Crank &mdash; look for spark. <strong>No spark</strong> &rarr; check CDI unit, ignition coil, kill switch wiring. <strong>Has spark</strong> but won't fire &rarr; fuel not reaching cylinder (clogged jet, stuck float, empty tank).</li>
+  </ul>
+
+  <div class="callout callout-info">
+    <strong>Marrakech Note</strong>
+    If the bike sat for &gt;2 weeks in summer heat, the most likely cause is a varnished pilot jet from stale fuel. Drain the float bowl and clean the pilot jet before anything else.
+  </div>
+
+  <!-- Flowchart 2: Poor Acceleration -->
+  <h2 id="poor-acceleration">Poor Acceleration / Hesitation</h2>
+
+  <ul class="flow-tree">
+    <li class="question">At what speed/RPM does the problem occur?</li>
+  </ul>
+
+  <h3>At all speeds</h3>
+  <ul class="flow-tree">
+    <li class="problem"><strong>General power loss.</strong> Check in order:</li>
+    <li class="solution">1. Air filter &mdash; clogged filter = restricted airflow = rich mixture = power loss. <a href="guides.html#air-filter-service" style="color:var(--success);">Clean/replace &rarr;</a></li>
+    <li class="solution">2. Spark plug &mdash; fouled or worn plug = weak ignition. Remove and inspect. Replace if electrode is rounded or covered in deposits.</li>
+    <li class="solution">3. Exhaust restriction &mdash; carbon buildup in exhaust port or muffler. Common on 4-strokes run rich.</li>
+    <li class="solution">4. Valve clearance &mdash; tight valves (esp. exhaust) reduce compression. Check: IN 0.08 mm, EX 0.08 mm cold.</li>
+  </ul>
+
+  <h3>Only at low speed / idle</h3>
+  <ul class="flow-tree">
+    <li class="problem"><strong>Low-speed fuel delivery issue.</strong></li>
+    <li class="solution">Pilot jet clogged (most likely in Marrakech). <a href="guides.html#carburetor-pilot-jet-cleaning" style="color:var(--success);">Clean pilot jet &rarr;</a></li>
+    <li class="solution">If K-Line available: check idle solenoid PWM. &gt;90% = ECU compensating for blockage.</li>
+    <li class="solution">Also check: vacuum leak at intake manifold (cracked rubber boot), idle air screw adjustment.</li>
+  </ul>
+
+  <h3>Only at high speed / full throttle</h3>
+  <ul class="flow-tree">
+    <li class="problem"><strong>Top-end issue &mdash; CVT or main fuel circuit.</strong></li>
+    <li class="solution">1. CVT rollers &mdash; flat-spotted rollers prevent full shift-out. RPM rises but speed doesn't follow. <a href="guides.html#cvt-belt-roller-inspection" style="color:var(--success);">Inspect CVT &rarr;</a></li>
+    <li class="solution">2. Drive belt &mdash; worn belt (measure width: replace at &lt;17.5 mm) slips at high load.</li>
+    <li class="solution">3. Main jet &mdash; partially clogged main jet starves fuel at wide-open throttle. Clean carb.</li>
+  </ul>
+
+  <!-- Flowchart 3: Unusual Noise -->
+  <h2 id="unusual-noise">Unusual Noise</h2>
+
+  <h3>Ticking / tapping from top of engine</h3>
+  <ul class="flow-tree">
+    <li class="question">Does it change with RPM?</li>
+    <li class="answer-yes"><strong>Yes, faster ticking at higher RPM</strong></li>
+    <li class="solution"><strong>Valve clearance out of spec.</strong> Check and adjust: IN 0.08 mm, EX 0.08 mm (cold). If clearance keeps going out quickly after adjustment &rarr; valve guides are worn. <a href="failure-modes.html#valve-guide-wear" style="color:var(--success);">See failure modes &rarr;</a></li>
+    <li class="answer-no"><strong>No, constant regardless of RPM</strong></li>
+    <li class="problem">Less likely valve-related. Check for loose heat shields, exhaust mount bolts, or fan shroud contact.</li>
+  </ul>
+
+  <h3>Grinding / whining from rear</h3>
+  <ul class="flow-tree">
+    <li class="solution"><strong>Check gear oil level first</strong> &mdash; remove fill/check bolt, oil should be at the hole level with bike upright. If low, refill with 80W-90 GL-4.</li>
+    <li class="problem">If oil level is fine and noise persists &rarr; final drive gear wear. Drain and inspect oil for metal particles. Workshop service required.</li>
+  </ul>
+
+  <h3>Squealing on acceleration</h3>
+  <ul class="flow-tree">
+    <li class="solution"><strong>CVT belt</strong> &mdash; belt is worn, glazed, or contaminated with oil. Open CVT cover and inspect. Replace belt if width &lt;17.5 mm or surface is shiny/glazed.</li>
+    <li class="problem">If belt is OK &rarr; variator or clutch drum surface contamination. Clean all CVT surfaces with brake cleaner (never use oil or grease inside the CVT).</li>
+  </ul>
+
+  <h3>Scraping when braking</h3>
+  <ul class="flow-tree">
+    <li class="problem"><strong>Brake pads worn to metal.</strong> Stop riding immediately. Inspect front disc pads &mdash; minimum lining thickness is 1 mm. Metal-on-metal contact damages the disc (expensive to replace).</li>
+    <li class="solution">Replace brake pads. Inspect disc surface for scoring &mdash; light scoring is normal, deep grooves mean disc replacement.</li>
+  </ul>
+
+  <!-- Flowchart 4: Overheating -->
+  <h2 id="overheating">Overheating</h2>
+
+  <ul class="flow-tree">
+    <li class="question">How do you know it's overheating?</li>
+    <li class="solution">K-Line: engine temp &gt;130&deg;C sustained. Without K-Line: loss of power, engine pinging/knocking under load, hot smell from engine area, oil burning smell.</li>
+  </ul>
+
+  <h3>Immediate Steps</h3>
+  <ul class="flow-tree">
+    <li class="solution">1. <strong>Reduce load</strong> &mdash; ride at lower RPM, avoid full throttle, get out of traffic if possible.</li>
+    <li class="solution">2. <strong>Increase airflow</strong> &mdash; ride at moderate speed (not idle) to get air over the cooling fins.</li>
+    <li class="solution">3. If engine is pinging/knocking &rarr; <strong>stop and let it cool</strong> for 10-15 minutes.</li>
+  </ul>
+
+  <h3>Root Cause Investigation</h3>
+  <ul class="flow-tree">
+    <li class="solution"><strong>Cooling fins blocked?</strong> &mdash; Remove body panels, brush/blow off all dust and debris from cylinder and head fins. This is the #1 cause in Marrakech.</li>
+    <li class="solution"><strong>Oil level low?</strong> &mdash; Low oil = reduced heat transfer. Check and top up.</li>
+    <li class="solution"><strong>Oil old?</strong> &mdash; Degraded oil loses heat-transfer capacity. If overdue for change, change it now.</li>
+    <li class="solution"><strong>Fan working?</strong> &mdash; The forced-air fan on the flywheel should spin when engine runs. If fan blades are broken or shroud is cracked &rarr; reduced cooling.</li>
+    <li class="solution"><strong>Riding pattern?</strong> &mdash; Prolonged idle in traffic with no airflow is the worst case. On 48&deg;C days, plan routes to avoid extended traffic jams.</li>
+    <li class="problem">If all above are OK and still overheating &rarr; possible issues: lean fuel mixture (clogged jet), wrong spark plug heat range, internal engine damage. Workshop diagnosis needed.</li>
+  </ul>
+
+  <div class="callout callout-danger">
+    <strong>DTC P0217 — Engine Over Temperature</strong>
+    If this code triggers (engine temp &gt;165&deg;C), the ECU has detected a critical overheat event. Do not ignore this. Check all cooling-related items above and change the engine oil immediately — it has likely been thermally degraded.
+  </div>
+
+</main>
+
+<footer>
+  Kymco Agility 50 4T — Marrakech Maintenance Wiki &bull; Last updated: April 2026
+</footer>
+
+</body>
+</html>

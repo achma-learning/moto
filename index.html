@@ -8,17 +8,8 @@
 </head>
 <body>
 
-<nav>
-  <a class="logo" href="index.html">Kymco Agility 50 4T <span>Marrakech Wiki</span></a>
-  <ul>
-    <li><a href="index.html" class="active">Home</a></li>
-    <li><a href="wiki/maintenance.html">Maintenance</a></li>
-    <li><a href="wiki/oil-systems.html">Oil Systems</a></li>
-    <li><a href="wiki/failure-modes.html">Failure Modes</a></li>
-    <li><a href="wiki/guides.html">Guides</a></li>
-    <li><a href="wiki/specs.html">Specs</a></li>
-  </ul>
-</nav>
+<nav id="nav"></nav>
+<script src="wiki/nav.js"></script>
 
 <main>
   <h1>Kymco Agility 50 4T</h1>
@@ -29,8 +20,18 @@
     All decisions — oil spec, maintenance intervals, hardware choices — are optimized for <em>longevity</em> under Marrakech conditions (40 &deg;C+ summers, dust, heavy traffic), not speed or power.
   </div>
 
+  <!-- Quick Actions -->
+  <h2 id="quick-actions">What Do You Need?</h2>
+  <div class="quick-actions">
+    <a class="quick-btn" href="wiki/troubleshooting.html#wont-start">My bike won't start</a>
+    <a class="quick-btn" href="wiki/maintenance.html">What's due next?</a>
+    <a class="quick-btn" href="wiki/guides.html#engine-oil-change">How do I change oil?</a>
+    <a class="quick-btn" href="wiki/pre-ride.html">Pre-ride checklist</a>
+    <a class="quick-btn" href="wiki/parts.html">Where to buy parts?</a>
+  </div>
+
   <!-- Quick Stats -->
-  <h2>Quick Reference</h2>
+  <h2 id="quick-reference">Quick Reference</h2>
   <div class="spec-list">
     <div class="spec-item">
       <span class="label">Engine</span>
@@ -50,7 +51,7 @@
     </div>
     <div class="spec-item">
       <span class="label">Engine Oil</span>
-      <span class="value">10W-40 &bull; ~750-800 ml &bull; every 1,500 km</span>
+      <span class="value">10W-40 &bull; 700 ml (change) / 800 ml (disassembly) &bull; every 1,500 km</span>
     </div>
     <div class="spec-item">
       <span class="label">Gear Oil</span>
@@ -85,7 +86,7 @@
 
     <div class="card">
       <h3>Known Failure Modes</h3>
-      <p>The six components most likely to fail, ranked by risk. CVT variator rollers top the list. Understand the symptoms, causes, and prevention for each.</p>
+      <p>Seven components most likely to fail, ranked by risk. CVT variator rollers top the list. Understand the symptoms, causes, and prevention for each.</p>
       <a href="wiki/failure-modes.html">View Risks &rarr;</a>
     </div>
 
@@ -99,6 +100,36 @@
       <h3>Bike Specifications</h3>
       <p>Full technical specs, torque values, fluid capacities, tire pressures, and diagnostic connector pinout for the Kymco Agility 50 4T.</p>
       <a href="wiki/specs.html">View Specs &rarr;</a>
+    </div>
+
+    <div class="card">
+      <h3>Pre-Ride Checklist</h3>
+      <p>Quick checks before every ride. Printable A4 format for the garage. Includes Marrakech-specific items for dust storms and Ramadan storage.</p>
+      <a href="wiki/pre-ride.html">View Checklist &rarr;</a>
+    </div>
+
+    <div class="card">
+      <h3>Troubleshooting</h3>
+      <p>Decision trees for common problems: won't start, poor acceleration, unusual noises, overheating. Follow the arrows to diagnose.</p>
+      <a href="wiki/troubleshooting.html">Diagnose Problem &rarr;</a>
+    </div>
+
+    <div class="card">
+      <h3>K-Line Diagnostics</h3>
+      <p>DIY ESP32 + L9637D diagnostic system. Read live engine data, log it, and predict failures with AI analysis. Full hardware guide and wiring.</p>
+      <a href="wiki/diagnostics.html">View Project &rarr;</a>
+    </div>
+
+    <div class="card">
+      <h3>Parts &amp; Prices</h3>
+      <p>Where to buy parts in Marrakech and online. DHS prices for all consumables, tools, and ESP32 hardware.</p>
+      <a href="wiki/parts.html">View Prices &rarr;</a>
+    </div>
+
+    <div class="card">
+      <h3>Seasonal Adjustments</h3>
+      <p>How summer heat and winter cold affect maintenance. Adjust your schedule by season plus storage tips for Ramadan and holidays.</p>
+      <a href="wiki/seasonal.html">View Seasonal &rarr;</a>
     </div>
 
   </div>
@@ -125,7 +156,7 @@
 </main>
 
 <footer>
-  Kymco Agility 50 4T — Marrakech Maintenance Wiki &bull; Durability over performance
+  Kymco Agility 50 4T — Marrakech Maintenance Wiki &bull; Last updated: <time datetime="2026-04">April 2026</time>
 </footer>
 
 </body>

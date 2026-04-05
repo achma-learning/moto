@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parts Sourcing &amp; Prices — Kymco Agility 50 4T Wiki</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav id="nav"></nav>
+<script src="nav.js"></script>
+
+<main>
+  <h1>Parts Sourcing &amp; Prices</h1>
+  <p class="subtitle">Where to buy parts, approximate DHS prices, and tips for sourcing in Morocco. Prices as of early 2026.</p>
+
+  <div class="callout callout-info">
+    <strong>Price Conversion</strong>
+    Online European shops price in EUR. Rough conversion: <strong>1 EUR &asymp; 11 DHS</strong>. Add 10-20% for shipping to Morocco. AliExpress prices are usually already in DHS or USD.
+  </div>
+
+  <!-- Consumables -->
+  <h2 id="consumables">Key Consumables</h2>
+  <table>
+    <thead>
+      <tr><th>Part</th><th>Specification</th><th>Approx. Price (DHS)</th><th>Best Source</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Engine oil</strong> (1L)</td><td>10W-40 semi-synthetic</td><td>80-120</td><td>Marjane, local moto shops</td></tr>
+      <tr><td><strong>Gear oil</strong> (small bottle)</td><td>80W-90 GL-4</td><td>40-60</td><td>Marjane, auto parts shops</td></tr>
+      <tr><td><strong>Air filter element</strong></td><td>Foam insert for Agility 50</td><td>60-100</td><td>la-becanerie.com, AliExpress</td></tr>
+      <tr><td><strong>Spark plug</strong></td><td>NGK CR7HSA</td><td>30-50</td><td>Local moto shops, Jumia</td></tr>
+      <tr><td><strong>Variator rollers</strong> (set of 6)</td><td>Stock weight ~6-7g</td><td>80-150</td><td>la-becanerie.com, AliExpress</td></tr>
+      <tr><td><strong>Drive belt</strong></td><td>CVT belt (check dimensions)</td><td>150-250</td><td>la-becanerie.com</td></tr>
+      <tr><td><strong>Brake pads</strong> (front)</td><td>Disc brake pads</td><td>80-120</td><td>la-becanerie.com, local shops</td></tr>
+      <tr><td><strong>Brake fluid</strong></td><td>DOT 4</td><td>30-50</td><td>Marjane, auto parts shops</td></tr>
+      <tr><td><strong>Oil drain plug washer</strong></td><td>M12 copper crush washer</td><td>5-10</td><td>Local hardware/moto shop</td></tr>
+      <tr><td><strong>Fuel filter</strong> (inline)</td><td>Universal inline 6mm</td><td>10-20</td><td>Auto parts shops, AliExpress</td></tr>
+    </tbody>
+  </table>
+
+  <!-- Online -->
+  <h2 id="online">Online Shops</h2>
+
+  <div class="card-grid">
+    <div class="card">
+      <h3>la-becanerie.com</h3>
+      <p><strong>Primary reference</strong> for Kymco Agility 50 parts. French-based, ships to Morocco. Good part diagrams for identification. Prices in EUR.</p>
+      <a href="https://www.la-becanerie.com/kymco-agility-50.html" target="_blank" rel="noopener">Browse Kymco Parts &rarr;</a>
+    </div>
+
+    <div class="card">
+      <h3>AliExpress</h3>
+      <p>Best for generic consumables (filters, rollers, belts) and electronics (ESP32, sensors). 2-4 week shipping. Verify dimensions before ordering.</p>
+    </div>
+
+    <div class="card">
+      <h3>Jumia.ma</h3>
+      <p>Some parts available domestically. Good for tools, oils, and basic consumables. Faster delivery than AliExpress. Check seller ratings.</p>
+    </div>
+  </div>
+
+  <!-- Local Marrakech -->
+  <h2 id="local">Local Sourcing (Marrakech)</h2>
+
+  <h3>Moto Parts Shops</h3>
+  <p>Concentrated in the <strong>Bab Doukkala</strong> and <strong>Sidi Youssef Ben Ali</strong> areas. Cheapest option for common consumables (oil, spark plugs, brake pads, filters). Tips:</p>
+  <ul style="margin: 0.5rem 0 1rem 1.5rem;">
+    <li>Bring the old part with you for exact matching</li>
+    <li>Prices are negotiable — always ask for the price first, then negotiate</li>
+    <li>Check packaging for genuine NGK/brand labels vs unmarked generics</li>
+    <li>Oil: buy sealed bottles from Marjane or Total stations to ensure authenticity</li>
+  </ul>
+
+  <h3>Marjane / Carrefour</h3>
+  <p>Reliable for branded oils (Castrol, Motul, Total), basic tools, brake fluid, and general supplies. Not specialized for scooter parts, but consistent quality for fluids.</p>
+
+  <h3>Total / Shell Stations</h3>
+  <p>Some carry motorcycle-specific oil (10W-40 JASO MA). More expensive than Marjane but convenient and guaranteed genuine.</p>
+
+  <!-- ESP32 Hardware -->
+  <h2 id="diagnostics-hardware">ESP32 Diagnostics Hardware</h2>
+  <table>
+    <thead>
+      <tr><th>Part</th><th>Approx. Price (DHS)</th><th>Source</th><th>Notes</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>ESP32 dev board (WROOM-32)</td><td>60-80</td><td>AliExpress, Jumia</td><td>Any ESP32 DevKit V1 or similar</td></tr>
+      <tr><td>L9637D transceiver IC</td><td>30-50</td><td>AliExpress</td><td>Key component — handles K-Line signal levels</td></tr>
+      <tr><td>LM7805 voltage regulator</td><td>5-10</td><td>AliExpress, local electronics</td><td>Or use a mini buck converter for efficiency</td></tr>
+      <tr><td>Prototype PCB / breadboard</td><td>10-20</td><td>AliExpress</td><td>Solder final version on PCB</td></tr>
+      <tr><td>Waterproof enclosure</td><td>15-30</td><td>AliExpress, hardware shop</td><td>Must be heat-resistant for under-seat mounting</td></tr>
+      <tr><td>Wiring + connectors</td><td>10-20</td><td>Local electronics</td><td>Use automotive-grade wire for vibration resistance</td></tr>
+      <tr><td><strong>Total</strong></td><td><strong>~130-210</strong></td><td></td><td></td></tr>
+    </tbody>
+  </table>
+
+  <!-- Tools -->
+  <h2 id="tools">Essential Tools</h2>
+  <p>Basic toolkit for all maintenance tasks in this wiki:</p>
+  <table>
+    <thead>
+      <tr><th>Tool</th><th>Approx. Price (DHS)</th><th>Used For</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Socket set (8-17 mm)</td><td>100-200</td><td>All bolts — engine oil drain, CVT cover, wheels</td></tr>
+      <tr><td>Torque wrench (5-50 Nm)</td><td>150-300</td><td>Accurate tightening — prevents stripped aluminum threads</td></tr>
+      <tr><td>Digital tire gauge</td><td>30-50</td><td>Weekly tire pressure checks</td></tr>
+      <tr><td>Multimeter</td><td>50-100</td><td>Battery voltage, charging system, sensor testing</td></tr>
+      <tr><td>Carburetor cleaner spray</td><td>30-50</td><td>Jet cleaning, general degreasing</td></tr>
+      <tr><td>Compressed air (can)</td><td>20-40</td><td>Air filter cleaning, carb passages</td></tr>
+      <tr><td>Funnel (small)</td><td>5-10</td><td>Oil filling without spills</td></tr>
+      <tr><td>Oil drain pan</td><td>20-40</td><td>Catch old oil — don't dump on the ground</td></tr>
+      <tr><td>Feeler gauge set</td><td>30-50</td><td>Valve clearance adjustment (need 0.08 mm blade)</td></tr>
+      <tr><td>Variator holding tool</td><td>50-100</td><td>CVT variator nut removal — or use impact wrench</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout callout-success">
+    <strong>Cost-Effective Approach</strong>
+    All consumables for a full year of Marrakech-schedule maintenance (oil x8, filter, plugs, rollers, pads) costs roughly <strong>800-1,200 DHS</strong>. That's the price of preventing a single breakdown that would cost much more in towing + emergency repair.
+  </div>
+
+</main>
+
+<footer>
+  Kymco Agility 50 4T — Marrakech Maintenance Wiki &bull; Last updated: April 2026
+</footer>
+
+</body>
+</html>

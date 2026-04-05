@@ -18,6 +18,24 @@
   --info: #3498db;
 }
 
+[data-theme="light"] {
+  --bg: #f5f5f0;
+  --bg-card: #ffffff;
+  --bg-card-alt: #f0f0ea;
+  --accent: #c0392b;
+  --accent-warm: #d68910;
+  --accent-green: #1e8449;
+  --accent-blue: #2471a3;
+  --text: #2d2d2d;
+  --text-muted: #666666;
+  --text-heading: #1a1a1a;
+  --border: #dddddd;
+  --danger: #c0392b;
+  --warning: #d68910;
+  --success: #1e8449;
+  --info: #2471a3;
+}
+
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
@@ -38,15 +56,15 @@ nav {
   z-index: 100;
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
   flex-wrap: wrap;
 }
 
 nav .logo {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 700;
   color: var(--accent);
-  padding: 1rem 0;
+  padding: 0.75rem 0;
   text-decoration: none;
   white-space: nowrap;
 }
@@ -54,24 +72,26 @@ nav .logo {
 nav .logo span {
   color: var(--text-muted);
   font-weight: 400;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
 }
 
 nav ul {
   list-style: none;
   display: flex;
-  gap: 0.25rem;
+  gap: 0.1rem;
   flex-wrap: wrap;
+  flex: 1;
 }
 
 nav ul li a {
   display: block;
-  padding: 0.75rem 1rem;
+  padding: 0.6rem 0.7rem;
   color: var(--text-muted);
   text-decoration: none;
-  font-size: 0.9rem;
+  font-size: 0.82rem;
   border-radius: 6px 6px 0 0;
   transition: all 0.2s;
+  white-space: nowrap;
 }
 
 nav ul li a:hover {
@@ -84,6 +104,88 @@ nav ul li a.active {
   background: var(--bg);
   font-weight: 600;
 }
+
+/* Nav actions (theme toggle + search) */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0;
+}
+
+.theme-btn {
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-size: 1.2rem;
+  padding: 0.3rem 0.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+  line-height: 1;
+}
+
+.theme-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.search-wrap {
+  position: relative;
+}
+
+.search-wrap input {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 0.35rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  width: 140px;
+  transition: width 0.2s, border-color 0.2s;
+}
+
+.search-wrap input:focus {
+  outline: none;
+  border-color: var(--accent);
+  width: 200px;
+}
+
+.search-results {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  margin-top: 4px;
+  min-width: 220px;
+  max-height: 300px;
+  overflow-y: auto;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  z-index: 200;
+}
+
+.search-item {
+  display: block;
+  padding: 0.5rem 0.75rem;
+  color: var(--text);
+  text-decoration: none;
+  font-size: 0.85rem;
+  border-bottom: 1px solid var(--border);
+}
+
+a.search-item:hover {
+  background: rgba(233, 69, 96, 0.1);
+  color: var(--accent);
+}
+
+.search-item:last-child { border-bottom: none; }
+
+/* Hamburger toggle (hidden by default) */
+.nav-toggle-cb { display: none; }
+.nav-toggle { display: none; }
 
 /* ---- Main Content ---- */
 main {
@@ -106,12 +208,14 @@ h2 {
   margin: 2rem 0 1rem;
   padding-bottom: 0.3rem;
   border-bottom: 1px solid var(--border);
+  position: relative;
 }
 
 h3 {
   color: var(--accent-warm);
   font-size: 1.1rem;
   margin: 1.5rem 0 0.75rem;
+  position: relative;
 }
 
 p { margin-bottom: 1rem; }
@@ -122,10 +226,31 @@ p { margin-bottom: 1rem; }
   margin-bottom: 2rem;
 }
 
+/* Anchor links */
+.anchor-link {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.8em;
+  margin-left: 0.5rem;
+  opacity: 0;
+  transition: opacity 0.2s;
+  vertical-align: middle;
+}
+
+h2:hover .anchor-link,
+h3:hover .anchor-link {
+  opacity: 0.6;
+}
+
+.anchor-link:hover {
+  opacity: 1 !important;
+  color: var(--accent);
+}
+
 /* ---- Cards ---- */
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 1.25rem;
   margin: 1.5rem 0;
 }
@@ -327,6 +452,35 @@ tr:hover { background: rgba(233, 69, 96, 0.05); }
 .risk-medium .fill { width: 60%; background: var(--warning); }
 .risk-low    .fill { width: 30%; background: var(--success); }
 
+/* ---- Quick Actions ---- */
+.quick-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin: 1.5rem 0;
+}
+
+.quick-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  background: var(--bg-card-alt);
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  color: var(--text);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.quick-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-1px);
+}
+
 /* ---- Footer ---- */
 footer {
   text-align: center;
@@ -337,20 +491,113 @@ footer {
   margin-top: 3rem;
 }
 
-/* ---- Responsive ---- */
+/* ---- Responsive — Mobile ---- */
 @media (max-width: 768px) {
-  nav { padding: 0 1rem; gap: 0.5rem; }
-  nav .logo { font-size: 1rem; }
-  nav ul li a { padding: 0.5rem 0.6rem; font-size: 0.8rem; }
+  nav {
+    padding: 0 1rem;
+    gap: 0;
+    flex-wrap: nowrap;
+    position: relative;
+  }
+
+  nav .logo {
+    font-size: 0.95rem;
+    flex: 1;
+  }
+
+  /* Hamburger button */
+  .nav-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 110;
+    order: 3;
+  }
+
+  .nav-toggle span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--text);
+    border-radius: 2px;
+    transition: all 0.3s;
+  }
+
+  /* Hide nav links by default on mobile */
+  nav ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--bg-card);
+    border-bottom: 2px solid var(--accent);
+    flex-direction: column;
+    padding: 0.5rem 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    z-index: 105;
+  }
+
+  nav ul li a {
+    padding: 0.65rem 1.5rem;
+    font-size: 0.9rem;
+    border-radius: 0;
+  }
+
+  /* Show nav when checkbox is checked */
+  .nav-toggle-cb:checked ~ ul {
+    display: flex;
+  }
+
+  /* Animate hamburger to X */
+  .nav-toggle-cb:checked ~ .nav-toggle span:nth-child(1) {
+    transform: rotate(45deg) translate(4px, 4px);
+  }
+  .nav-toggle-cb:checked ~ .nav-toggle span:nth-child(2) {
+    opacity: 0;
+  }
+  .nav-toggle-cb:checked ~ .nav-toggle span:nth-child(3) {
+    transform: rotate(-45deg) translate(4px, -4px);
+  }
+
+  .nav-actions {
+    order: 2;
+  }
+
+  .search-wrap input { width: 100px; }
+  .search-wrap input:focus { width: 140px; }
+
   main { padding: 1.5rem 1rem; }
   h1 { font-size: 1.5rem; }
   .oil-diagram { grid-template-columns: 1fr; }
   .card-grid { grid-template-columns: 1fr; }
+  .quick-actions { flex-direction: column; }
 }
 
 /* ---- Print ---- */
 @media print {
-  nav { display: none; }
-  body { background: #fff; color: #000; }
-  .card { border: 1px solid #ccc; }
+  nav, .nav-actions, .no-print { display: none; }
+  body { background: #fff; color: #000; font-size: 11pt; line-height: 1.5; }
+  main { max-width: 100%; padding: 0.5cm; }
+  h1 { font-size: 16pt; color: #000; border-color: #000; page-break-after: avoid; }
+  h2 { font-size: 13pt; color: #333; border-color: #999; page-break-after: avoid; page-break-before: auto; }
+  h3 { font-size: 11pt; color: #555; page-break-after: avoid; }
+  .card { border: 1px solid #ccc; break-inside: avoid; }
+  .callout { border-color: #999; background: #f5f5f5; color: #000; break-inside: avoid; }
+  .callout strong { color: #000; }
+  table { break-inside: avoid; }
+  th { background: #eee; color: #000; border-color: #333; }
+  td { border-color: #ccc; }
+  .badge { border: 1px solid #999; background: transparent; color: #333; }
+  .steps li::before { background: #333; }
+  .anchor-link { display: none; }
+  footer { border-color: #ccc; }
+  footer::after { content: ' — ' attr(data-url); }
+
+  /* Guides: each guide on its own page */
+  .guides-page h2 { page-break-before: always; }
+  .guides-page h2:first-of-type { page-break-before: auto; }
 }

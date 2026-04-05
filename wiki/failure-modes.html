@@ -8,24 +8,15 @@
 </head>
 <body>
 
-<nav>
-  <a class="logo" href="../index.html">Kymco Agility 50 4T <span>Marrakech Wiki</span></a>
-  <ul>
-    <li><a href="../index.html">Home</a></li>
-    <li><a href="maintenance.html">Maintenance</a></li>
-    <li><a href="oil-systems.html">Oil Systems</a></li>
-    <li><a href="failure-modes.html" class="active">Failure Modes</a></li>
-    <li><a href="guides.html">Guides</a></li>
-    <li><a href="specs.html">Specs</a></li>
-  </ul>
-</nav>
+<nav id="nav"></nav>
+<script src="nav.js"></script>
 
 <main>
   <h1>Known Failure Modes</h1>
-  <p class="subtitle">Six components most likely to fail under Marrakech conditions, ranked by risk. Understanding these lets you catch problems early and replace proactively.</p>
+  <p class="subtitle">Seven components most likely to fail under Marrakech conditions, ranked by risk. Understanding these lets you catch problems early and replace proactively.</p>
 
   <!-- 1. CVT Variator Rollers -->
-  <h2>1. CVT Variator Rollers <span class="badge badge-danger">Highest Risk</span></h2>
+  <h2 id="cvt-variator-rollers">1. CVT Variator Rollers <span class="badge badge-danger">Highest Risk</span></h2>
   <div class="risk-bar risk-high"><span>Risk:</span><div class="bar"><div class="fill"></div></div><span>90%</span></div>
 
   <div class="callout callout-danger">
@@ -58,7 +49,7 @@
   <p>Inspect every <strong>5,000 km</strong>. Replace proactively every <strong>10,000 km</strong>. Use quality aftermarket rollers rated for high heat. Keep CVT cover clean — dust acts as abrasive.</p>
 
   <!-- 2. Centrifugal Clutch Spring Fatigue -->
-  <h2>2. Centrifugal Clutch Spring Fatigue <span class="badge badge-warning">Medium-High Risk</span></h2>
+  <h2 id="clutch-spring-fatigue">2. Centrifugal Clutch Spring Fatigue <span class="badge badge-warning">Medium-High Risk</span></h2>
   <div class="risk-bar risk-medium"><span>Risk:</span><div class="bar"><div class="fill"></div></div><span>65%</span></div>
 
   <h3>What It Does</h3>
@@ -79,7 +70,7 @@
   <p>Inspect springs every <strong>10,000 km</strong>. Replace clutch assembly if springs are discolored (heat bluing) or shoes are below 2 mm lining. Avoid prolonged idling in traffic — it heat-soaks the clutch.</p>
 
   <!-- 3. Valve Guide Wear -->
-  <h2>3. Valve Guide Wear <span class="badge badge-warning">Medium Risk</span></h2>
+  <h2 id="valve-guide-wear">3. Valve Guide Wear <span class="badge badge-warning">Medium Risk</span></h2>
   <div class="risk-bar risk-medium"><span>Risk:</span><div class="bar"><div class="fill"></div></div><span>55%</span></div>
 
   <h3>What It Does</h3>
@@ -101,7 +92,7 @@
   <p>Use quality engine oil changed every 1,500 km. Avoid sustained high RPM (&gt;6,500) in hot weather. Ensure cooling fins are clean and unobstructed. Valve guide replacement requires a workshop — it's a cylinder head job.</p>
 
   <!-- 4. Carburetor Pilot Jet Clogging -->
-  <h2>4. Carburetor Pilot Jet Clogging <span class="badge badge-warning">Medium Risk</span></h2>
+  <h2 id="pilot-jet-clogging">4. Carburetor Pilot Jet Clogging <span class="badge badge-warning">Medium Risk</span></h2>
   <div class="risk-bar risk-medium"><span>Risk:</span><div class="bar"><div class="fill"></div></div><span>55%</span></div>
 
   <h3>What It Does</h3>
@@ -130,7 +121,7 @@
   <p>Clean air filter every <strong>1,500 km</strong>. Add an inline fuel filter if not already fitted. Preventive carb cleaning every <strong>3,000 km</strong>. Use fresh fuel — don't let fuel sit more than 2-3 weeks.</p>
 
   <!-- 5. Brake Caliper Piston Seizure -->
-  <h2>5. Brake Caliper Piston Seizure <span class="badge badge-info">Medium-Low Risk</span></h2>
+  <h2 id="brake-caliper-seizure">5. Brake Caliper Piston Seizure <span class="badge badge-info">Medium-Low Risk</span></h2>
   <div class="risk-bar risk-medium"><span>Risk:</span><div class="bar"><div class="fill"></div></div><span>40%</span></div>
 
   <h3>What It Does</h3>
@@ -149,7 +140,7 @@
   <p>Clean and lubricate caliper pistons every <strong>6,000 km</strong>. Push pistons back, clean with brake cleaner, apply thin coat of silicone grease to piston surface. Replace brake fluid annually — moisture causes internal corrosion.</p>
 
   <!-- 6. Starter Motor Brush Wear -->
-  <h2>6. Starter Motor Brush Wear <span class="badge badge-success">Lower Risk</span></h2>
+  <h2 id="starter-motor-brush-wear">6. Starter Motor Brush Wear <span class="badge badge-success">Lower Risk</span></h2>
   <div class="risk-bar risk-low"><span>Risk:</span><div class="bar"><div class="fill"></div></div><span>25%</span></div>
 
   <h3>What It Does</h3>
@@ -169,10 +160,32 @@
   <h3>Prevention</h3>
   <p>Inspect brushes at <strong>15,000 km</strong>. Use kick-start when convenient to reduce starter motor wear. Ensure battery is healthy — a weak battery makes the starter work harder.</p>
 
+  <!-- 7. Air Filter Housing Seal Degradation -->
+  <h2 id="air-filter-seal">7. Air Filter Housing Seal Degradation <span class="badge badge-info">Lower Risk</span></h2>
+  <div class="risk-bar risk-low"><span>Risk:</span><div class="bar"><div class="fill"></div></div><span>25%</span></div>
+
+  <h3>What It Does</h3>
+  <p>The foam rubber seal between the air filter housing and the engine intake creates an airtight path — forcing all intake air through the filter element. Without it, unfiltered air enters the engine directly.</p>
+
+  <h3>How It Fails</h3>
+  <p>Marrakech heat (40-48 &deg;C ambient, even higher under the body panels) degrades the foam seal material over time. The seal shrinks, hardens, cracks, or crumbles, creating gaps between the housing and the intake. This effectively <strong>bypasses the air filter entirely</strong>, allowing fine Saharan dust directly into the carburetor and cylinder. Symptoms:</p>
+  <ul style="margin: 0.5rem 0 1rem 1.5rem;">
+    <li>Accelerated wear on all dust-sensitive components (piston rings, cylinder bore, valve guides)</li>
+    <li>Pilot jet clogs more frequently despite a clean air filter</li>
+    <li>Increased oil consumption (dust acts as abrasive on piston rings)</li>
+    <li>Subtle — you won't feel it until damage is done</li>
+  </ul>
+
+  <h3>Detection</h3>
+  <p>Visual inspection during every air filter service. Remove the filter and examine the seal around the housing-to-intake joint. Press on the seal — it should be soft and springy. If it's hard, cracked, or doesn't spring back, it's compromised. Look for dust tracks past the seal.</p>
+
+  <h3>Prevention</h3>
+  <p>Inspect seal at every air filter service (<strong>every 3,000 km</strong>). Replace seal if it shows any hardening or cracking. The seal is cheap (~10-20 DHS) — treating it as a consumable is the safest approach. Apply a thin coat of silicone grease to keep it supple in heat.</p>
+
 </main>
 
 <footer>
-  Kymco Agility 50 4T — Marrakech Maintenance Wiki &bull; Durability over performance
+  Kymco Agility 50 4T — Marrakech Maintenance Wiki &bull; Last updated: <time datetime="2026-04">April 2026</time>
 </footer>
 
 </body>

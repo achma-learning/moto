@@ -8,24 +8,15 @@
 </head>
 <body>
 
-<nav>
-  <a class="logo" href="../index.html">Kymco Agility 50 4T <span>Marrakech Wiki</span></a>
-  <ul>
-    <li><a href="../index.html">Home</a></li>
-    <li><a href="maintenance.html">Maintenance</a></li>
-    <li><a href="oil-systems.html">Oil Systems</a></li>
-    <li><a href="failure-modes.html">Failure Modes</a></li>
-    <li><a href="guides.html">Guides</a></li>
-    <li><a href="specs.html" class="active">Specs</a></li>
-  </ul>
-</nav>
+<nav id="nav"></nav>
+<script src="nav.js"></script>
 
 <main>
   <h1>Technical Specifications</h1>
   <p class="subtitle">Complete specs, torque values, fluid capacities, and diagnostic reference for the Kymco Agility 50 4T.</p>
 
   <!-- Engine -->
-  <h2>Engine</h2>
+  <h2 id="engine">Engine</h2>
   <div class="spec-list">
     <div class="spec-item"><span class="label">Type</span><span class="value">4-stroke, SOHC, 2-valve, air-cooled</span></div>
     <div class="spec-item"><span class="label">Displacement</span><span class="value">49.5 cc</span></div>
@@ -33,7 +24,7 @@
     <div class="spec-item"><span class="label">Compression Ratio</span><span class="value">~10.5:1</span></div>
     <div class="spec-item"><span class="label">Max Power</span><span class="value">~2.7 kW (3.6 HP) @ 7,500 RPM</span></div>
     <div class="spec-item"><span class="label">Max Torque</span><span class="value">~3.5 Nm @ 6,000 RPM</span></div>
-    <div class="spec-item"><span class="label">Idle Speed</span><span class="value">1,500 &plusmn; 100 RPM</span></div>
+    <div class="spec-item"><span class="label">Idle Speed</span><span class="value">2,000 &plusmn; 100 RPM</span></div>
     <div class="spec-item"><span class="label">Fuel System</span><span class="value">Keihin CVK carburetor</span></div>
     <div class="spec-item"><span class="label">Ignition</span><span class="value">CDI (Capacitor Discharge Ignition)</span></div>
     <div class="spec-item"><span class="label">ECU</span><span class="value">Dellorto LDC8, 16-bit</span></div>
@@ -42,16 +33,16 @@
   </div>
 
   <!-- Valve Train -->
-  <h2>Valve Train</h2>
+  <h2 id="valve-train">Valve Train</h2>
   <div class="spec-list">
     <div class="spec-item"><span class="label">Configuration</span><span class="value">SOHC, 2 valves (1 intake, 1 exhaust)</span></div>
-    <div class="spec-item"><span class="label">Intake Valve Clearance</span><span class="value">0.10 mm (cold)</span></div>
-    <div class="spec-item"><span class="label">Exhaust Valve Clearance</span><span class="value">0.15 mm (cold)</span></div>
+    <div class="spec-item"><span class="label">Intake Valve Clearance</span><span class="value">0.08 mm (cold)</span></div>
+    <div class="spec-item"><span class="label">Exhaust Valve Clearance</span><span class="value">0.08 mm (cold)</span></div>
     <div class="spec-item"><span class="label">Cam Chain</span><span class="value">Roller chain, automatic tensioner</span></div>
   </div>
 
   <!-- Transmission -->
-  <h2>Transmission</h2>
+  <h2 id="transmission">Transmission</h2>
   <div class="spec-list">
     <div class="spec-item"><span class="label">Type</span><span class="value">CVT (Continuously Variable Transmission)</span></div>
     <div class="spec-item"><span class="label">Primary Drive</span><span class="value">V-belt + variator</span></div>
@@ -64,7 +55,7 @@
   </div>
 
   <!-- Fluids -->
-  <h2>Fluids & Capacities</h2>
+  <h2 id="fluids">Fluids &amp; Capacities</h2>
   <table>
     <thead>
       <tr><th>Fluid</th><th>Specification</th><th>Capacity</th><th>Marrakech Interval</th></tr>
@@ -73,7 +64,7 @@
       <tr>
         <td><strong>Engine oil</strong></td>
         <td>10W-40 semi-synthetic, API SJ+</td>
-        <td>750-800 ml</td>
+        <td>700 ml (at change), 800 ml (at disassembly)</td>
         <td>Every 1,500 km</td>
       </tr>
       <tr>
@@ -104,14 +95,14 @@
   </table>
 
   <!-- Torque Values -->
-  <h2>Torque Values</h2>
+  <h2 id="torque-values">Torque Values</h2>
   <table>
     <thead>
       <tr><th>Fastener</th><th>Torque (Nm)</th><th>Notes</th></tr>
     </thead>
     <tbody>
       <tr><td>Engine oil drain plug</td><td>~25 Nm</td><td>Replace copper washer each time</td></tr>
-      <tr><td>Gear oil drain plug</td><td>~15 Nm</td><td>Replace aluminum washer each time</td></tr>
+      <tr><td>Gear oil drain plug</td><td>8-12 Nm</td><td>Replace aluminum washer each time. Workshop manual: 0.8-1.2 kgf&middot;m</td></tr>
       <tr><td>Spark plug</td><td>~12 Nm</td><td>Hand-tight + 1/4 turn if no torque wrench</td></tr>
       <tr><td>Variator nut</td><td>~40-45 Nm</td><td>Use holding tool or impact wrench</td></tr>
       <tr><td>Clutch nut</td><td>~40-45 Nm</td><td>Use holding tool or impact wrench</td></tr>
@@ -123,17 +114,17 @@
   </table>
 
   <!-- Tires -->
-  <h2>Tires & Wheels</h2>
+  <h2 id="tires">Tires &amp; Wheels</h2>
   <div class="spec-list">
     <div class="spec-item"><span class="label">Front Tire</span><span class="value">120/70-12</span></div>
     <div class="spec-item"><span class="label">Rear Tire</span><span class="value">130/70-12</span></div>
     <div class="spec-item"><span class="label">Front Pressure (cold)</span><span class="value">1.75 bar (25 PSI)</span></div>
-    <div class="spec-item"><span class="label">Rear Pressure (cold)</span><span class="value">2.25 bar (32 PSI)</span></div>
+    <div class="spec-item"><span class="label">Rear Pressure (cold)</span><span class="value">2.0 bar solo (29 PSI), 2.25 bar with passenger (32 PSI)</span></div>
     <div class="spec-item"><span class="label">Tread Depth Minimum</span><span class="value">1.0 mm</span></div>
   </div>
 
   <!-- Brakes -->
-  <h2>Brakes</h2>
+  <h2 id="brakes">Brakes</h2>
   <div class="spec-list">
     <div class="spec-item"><span class="label">Front Brake</span><span class="value">Hydraulic disc, single piston caliper</span></div>
     <div class="spec-item"><span class="label">Rear Brake</span><span class="value">Drum brake</span></div>
@@ -144,7 +135,7 @@
   </div>
 
   <!-- Electrical -->
-  <h2>Electrical System</h2>
+  <h2 id="electrical">Electrical System</h2>
   <div class="spec-list">
     <div class="spec-item"><span class="label">Battery</span><span class="value">12V, ~5-7 Ah (YTX5L-BS or equivalent)</span></div>
     <div class="spec-item"><span class="label">Charging Voltage</span><span class="value">13.0-14.5V (engine running)</span></div>
@@ -154,11 +145,11 @@
   </div>
 
   <!-- Diagnostic Connector -->
-  <h2>Diagnostic Connector (K-Line)</h2>
+  <h2 id="diagnostic-connector">Diagnostic Connector (K-Line)</h2>
 
-  <div class="callout callout-info">
+  <div class="callout callout-warning">
     <strong>ECU Diagnostic Protocol</strong>
-    ISO 14230 / KWP2000 via K-Line. Compatible with ELM327 adapters that support "Protocol 5" (ISO 14230 slow init).
+    ISO 14230 / KWP2000 via K-Line. <strong>Recommended hardware: ESP32 + L9637D transceiver</strong> (~150 DHS total). Cheap ELM327 V2.1 clones (common in Morocco) are unreliable on K-Line/ISO 14230 — they only handle CAN protocol reliably. Only genuine ELM327 V1.5+ adapters work, and those are rare locally. See <a href="diagnostics.html" style="color: var(--warning);">Diagnostics page</a> for the full hardware guide.
   </div>
 
   <table>
@@ -178,7 +169,7 @@
       <tr><th>Parameter</th><th>Unit</th><th>Normal Range</th><th>Durability Relevance</th></tr>
     </thead>
     <tbody>
-      <tr><td>Engine RPM</td><td>RPM</td><td>1,400-1,600 idle</td><td>High RPM = accelerated valve/piston wear</td></tr>
+      <tr><td>Engine RPM</td><td>RPM</td><td>1,900-2,100 idle</td><td>High RPM = accelerated valve/piston wear</td></tr>
       <tr><td>Engine Temp (EWT)</td><td>&deg;C</td><td>80-120</td><td>&gt;130 = oil degradation, &gt;165 = DTC P0217</td></tr>
       <tr><td>TPS Position</td><td>%</td><td>0-100</td><td>Erratic = sensor failure approaching</td></tr>
       <tr><td>O2 Sensor Voltage</td><td>V</td><td>0.2-0.6</td><td>Drift outside range = AFR issue = carbon buildup</td></tr>
@@ -191,7 +182,7 @@
   </table>
 
   <!-- Dimensions -->
-  <h2>Dimensions & Weight</h2>
+  <h2 id="dimensions">Dimensions &amp; Weight</h2>
   <div class="spec-list">
     <div class="spec-item"><span class="label">Wheelbase</span><span class="value">~1,250 mm</span></div>
     <div class="spec-item"><span class="label">Seat Height</span><span class="value">~760 mm</span></div>
@@ -200,20 +191,49 @@
   </div>
 
   <!-- Marrakech-specific -->
-  <h2>Marrakech Operating Conditions</h2>
+  <h2 id="marrakech">Marrakech Operating Conditions</h2>
+  <p class="subtitle">Based on 2021&ndash;2025 climate data. 2024 was officially Morocco's hottest year on record.</p>
+
+  <h3>Temperature</h3>
   <div class="spec-list">
     <div class="spec-item"><span class="label">Altitude</span><span class="value">~460 m above sea level</span></div>
-    <div class="spec-item"><span class="label">Summer Ambient Temp</span><span class="value">35-48 &deg;C</span></div>
-    <div class="spec-item"><span class="label">Winter Ambient Temp</span><span class="value">5-20 &deg;C</span></div>
-    <div class="spec-item"><span class="label">Air Quality</span><span class="value">High dust and particulate levels</span></div>
-    <div class="spec-item"><span class="label">Riding Pattern</span><span class="value">Predominantly stop-and-go urban traffic</span></div>
-    <div class="spec-item"><span class="label">Jetting Note</span><span class="value">Stock jetting is for sea-level Europe — slightly lean pilot jet may improve efficiency at 460 m altitude</span></div>
+    <div class="spec-item"><span class="label">Annual Average Temp</span><span class="value">~20 &deg;C (trending +1.5 &deg;C above 1991&ndash;2020 baseline)</span></div>
+    <div class="spec-item"><span class="label">Summer Ambient Temp</span><span class="value">35&ndash;48 &deg;C (avg daily highs 35&ndash;38 &deg;C; 47.6 &deg;C recorded July 2024)</span></div>
+    <div class="spec-item"><span class="label">Winter Ambient Temp</span><span class="value">2&ndash;20 &deg;C (avg Jan min 5.9 &deg;C; coldest nights ~2 &deg;C)</span></div>
+    <div class="spec-item"><span class="label">Absolute Recorded Range</span><span class="value">&minus;3 &deg;C to 49.6 &deg;C (full historical envelope)</span></div>
+    <div class="spec-item"><span class="label">Diurnal Swing</span><span class="value">15&ndash;20 &deg;C (inland semi-arid = massive day/night delta)</span></div>
+  </div>
+
+  <h3>Air Quality &amp; Climate</h3>
+  <div class="spec-list">
+    <div class="spec-item"><span class="label">Air Quality (AQI)</span><span class="value">Moderate &mdash; typically 30&ndash;70; 560 km from Sahara, the world's largest dust source</span></div>
+    <div class="spec-item"><span class="label">Summer Particulates</span><span class="value">PM10 dominated by mineral dust (Saharan origin)</span></div>
+    <div class="spec-item"><span class="label">Winter Particulates</span><span class="value">PM10 mainly organic aerosol from combustion/traffic</span></div>
+    <div class="spec-item"><span class="label">Humidity</span><span class="value">45&ndash;65 % (low in summer &rarr; accelerated evaporation)</span></div>
+    <div class="spec-item"><span class="label">Annual Rainfall</span><span class="value">~250 mm/year, concentrated Oct&ndash;May; 7th consecutive drought year in 2024 (&minus;24.7 % deficit)</span></div>
+  </div>
+
+  <h3>Riding &amp; Engine Impact</h3>
+  <div class="spec-list">
+    <div class="spec-item"><span class="label">Riding Pattern</span><span class="value">Predominantly stop-and-go urban traffic with frequent medina-adjacent congestion</span></div>
+    <div class="spec-item"><span class="label">Thermal Stress Note</span><span class="value">At 460 m, air density is ~5 % lower than sea level &rarr; slightly reduced cooling on air-cooled engines</span></div>
+    <div class="spec-item"><span class="label">Jetting Note</span><span class="value">Stock jetting is for sea-level ~15 &deg;C Europe. At 460 m / 40 &deg;C+, air is substantially thinner &mdash; one-step leaner pilot jet may improve idle stability. Re-evaluate main jet if sustained full-throttle &gt;3,000 RPM.</span></div>
+  </div>
+
+  <div class="callout callout-danger">
+    <strong>Worst-Case Thermal Scenario</strong>
+    48 &deg;C ambient day, stuck in Bab Doukkala traffic at idle, with Saharan dust clogging the air filter. The 47.6 &deg;C peak recorded in July 2024 is no longer an outlier &mdash; it's becoming the new ceiling your air-cooled cylinder must survive every summer. Design your maintenance schedule around this scenario.
+  </div>
+
+  <div class="callout callout-warning">
+    <strong>2024 Heatwave Trend</strong>
+    July and August 2024 saw prolonged consecutive heatwaves with increasing frequency and intensity. Combined with the 7th consecutive drought year, dust levels are rising and engine cooling is under more stress than ever. Oil change intervals and air filter service are more critical now than when this bike was designed.
   </div>
 
 </main>
 
 <footer>
-  Kymco Agility 50 4T — Marrakech Maintenance Wiki &bull; Durability over performance
+  Kymco Agility 50 4T — Marrakech Maintenance Wiki &bull; Last updated: <time datetime="2026-04">April 2026</time>
 </footer>
 
 </body>
