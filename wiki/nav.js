@@ -27,7 +27,8 @@
     { href: prefix + 'failure-modes.html', label: 'Failure Modes', file: 'failure-modes.html' },
     { href: prefix + 'diagnostics.html', label: 'Diagnostics', file: 'diagnostics.html' },
     { href: prefix + 'parts.html', label: 'Parts', file: 'parts.html' },
-    { href: prefix + 'seasonal.html', label: 'Seasonal', file: 'seasonal.html' }
+    { href: prefix + 'seasonal.html', label: 'Seasonal', file: 'seasonal.html' },
+    { href: prefix + 'manuals.html', label: 'Manuals', file: 'manuals.html' }
   ];
 
   var links = pages.map(function(p) {
@@ -79,7 +80,8 @@
     { title: 'Failure Modes', url: prefix + 'failure-modes.html', keywords: 'failure mode risk cvt variator roller clutch spring valve guide carburetor pilot jet brake caliper piston starter motor brush' },
     { title: 'K-Line Diagnostics', url: prefix + 'diagnostics.html', keywords: 'diagnostics kline k-line esp32 ecu obd pid elm327 l9637d sensor rpm temperature analysis' },
     { title: 'Parts & Prices', url: prefix + 'parts.html', keywords: 'parts price cost dhs buy shop marjane jumia aliexpress becanerie tools oil filter plug belt roller' },
-    { title: 'Seasonal Maintenance', url: prefix + 'seasonal.html', keywords: 'seasonal summer winter heat cold ramadan storage dust rain transition' }
+    { title: 'Seasonal Maintenance', url: prefix + 'seasonal.html', keywords: 'seasonal summer winter heat cold ramadan storage dust rain transition' },
+    { title: 'Manuals & External Resources', url: prefix + 'manuals.html', keywords: 'manuals manual user atelier workshop kymco agility 4t 2t pdf drive parts catalog buyers guide azmotors wayback backup external resource reference' }
   ];
 
   document.addEventListener('input', function(e) {
