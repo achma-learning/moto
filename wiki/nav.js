@@ -76,7 +76,7 @@
     { title: 'Maintenance Schedule', url: prefix + 'maintenance.html', keywords: 'maintenance schedule interval oil filter valve cvt belt brake battery tire' },
     { title: 'How-To Guides', url: prefix + 'guides.html', keywords: 'guide how to engine oil change gear oil air filter tire pressure carburetor pilot jet cvt belt roller brake caliper throttle cable spark plug' },
     { title: 'Troubleshooting', url: prefix + 'troubleshooting.html', keywords: 'troubleshoot problem wont start no start poor acceleration hesitation noise ticking grinding squealing overheating overheat' },
-    { title: 'Specifications', url: prefix + 'specs.html', keywords: 'specs specifications engine valve torque tire brake electrical ecu diagnostic pid marrakech' },
+    { title: 'Specifications', url: prefix + 'specs.html', keywords: 'specs specifications engine valve torque fluids oil tire brake electrical battery fuse dimensions weight oem factory marrakech' },
     { title: 'Oil Systems', url: prefix + 'oil-systems.html', keywords: 'oil engine gear transmission 10w40 80w90 drain plug two systems' },
     { title: 'Failure Modes', url: prefix + 'failure-modes.html', keywords: 'failure mode risk cvt variator roller clutch spring valve guide carburetor pilot jet brake caliper piston starter motor brush' },
     { title: 'K-Line Diagnostics', url: prefix + 'diagnostics.html', keywords: 'diagnostics kline k-line esp32 ecu obd pid elm327 l9637d sensor rpm temperature analysis' },

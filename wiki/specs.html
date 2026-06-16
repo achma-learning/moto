@@ -152,43 +152,6 @@
     <div class="spec-item"><span class="label">Starter Motor</span><span class="value">12V DC, carbon brush type</span></div>
   </div>
 
-  <!-- Diagnostic Connector -->
-  <h2 id="diagnostic-connector">Diagnostic Connector (K-Line)</h2>
-
-  <div class="callout callout-warning">
-    <strong>ECU Diagnostic Protocol</strong>
-    ISO 14230 / KWP2000 via K-Line. <strong>Recommended hardware: ESP32 + L9637D transceiver</strong> (~150 DHS total). Cheap ELM327 V2.1 clones (common in Morocco) are unreliable on K-Line/ISO 14230 — they only handle CAN protocol reliably. Only genuine ELM327 V1.5+ adapters work, and those are rare locally. See <a href="diagnostics.html" style="color: var(--warning);">Diagnostics page</a> for the full hardware guide.
-  </div>
-
-  <table>
-    <thead>
-      <tr><th>Pin</th><th>Wire Color</th><th>Function</th></tr>
-    </thead>
-    <tbody>
-      <tr><td>1</td><td>B/L (Black/Blue)</td><td>Battery + (12V)</td></tr>
-      <tr><td>2</td><td>L/O (Blue/Orange)</td><td>K-Line (data)</td></tr>
-      <tr><td>5</td><td>G/B (Green/Black)</td><td>Ground</td></tr>
-    </tbody>
-  </table>
-
-  <h3>Available Live PIDs</h3>
-  <table>
-    <thead>
-      <tr><th>Parameter</th><th>Unit</th><th>Normal Range</th><th>Durability Relevance</th></tr>
-    </thead>
-    <tbody>
-      <tr><td>Engine RPM</td><td>RPM</td><td>1,600-1,800 idle</td><td>High RPM = accelerated valve/piston wear</td></tr>
-      <tr><td>Engine Temp (EWT)</td><td>&deg;C</td><td>80-120</td><td>&gt;130 = oil degradation, &gt;165 = DTC P0217</td></tr>
-      <tr><td>TPS Position</td><td>%</td><td>0-100</td><td>Erratic = sensor failure approaching</td></tr>
-      <tr><td>O2 Sensor Voltage</td><td>V</td><td>0.2-0.6</td><td>Drift outside range = AFR issue = carbon buildup</td></tr>
-      <tr><td>Battery Voltage</td><td>V</td><td>&gt;13.0 running</td><td>&lt;13V = charging system failing</td></tr>
-      <tr><td>Idle Solenoid PWM</td><td>%</td><td>30-80</td><td>&gt;90% = carburetor clog likely</td></tr>
-      <tr><td>Ignition Advance</td><td>&deg;</td><td>3-13 at idle</td><td>Deviation = timing problem</td></tr>
-      <tr><td>Speed (VSS)</td><td>km/h</td><td>—</td><td>RPM/speed ratio reveals CVT health</td></tr>
-      <tr><td>Active DTCs</td><td>codes</td><td>None</td><td>Early warning of component failure</td></tr>
-    </tbody>
-  </table>
-
   <!-- Dimensions -->
   <h2 id="dimensions">Dimensions &amp; Weight</h2>
   <div class="spec-list">
