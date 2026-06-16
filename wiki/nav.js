@@ -28,7 +28,8 @@
     { href: prefix + 'diagnostics.html', label: 'Diagnostics', file: 'diagnostics.html' },
     { href: prefix + 'parts.html', label: 'Parts', file: 'parts.html' },
     { href: prefix + 'seasonal.html', label: 'Seasonal', file: 'seasonal.html' },
-    { href: prefix + 'manuals.html', label: 'Manuals', file: 'manuals.html' }
+    { href: prefix + 'manuals.html', label: 'Manuals', file: 'manuals.html' },
+    { href: prefix + 'documents.html', label: 'Documents', file: 'documents.html' }
   ];
 
   var links = pages.map(function(p) {
@@ -81,7 +82,8 @@
     { title: 'K-Line Diagnostics', url: prefix + 'diagnostics.html', keywords: 'diagnostics kline k-line esp32 ecu obd pid elm327 l9637d sensor rpm temperature analysis' },
     { title: 'Parts & Prices', url: prefix + 'parts.html', keywords: 'parts price cost dhs buy shop marjane jumia aliexpress becanerie tools oil filter plug belt roller' },
     { title: 'Seasonal Maintenance', url: prefix + 'seasonal.html', keywords: 'seasonal summer winter heat cold ramadan storage dust rain transition' },
-    { title: 'Manuals & External Resources', url: prefix + 'manuals.html', keywords: 'manuals manual user atelier workshop kymco agility 4t 2t pdf drive parts catalog buyers guide azmotors wayback backup external resource reference' }
+    { title: 'Manuals & External Resources', url: prefix + 'manuals.html', keywords: 'manuals manual user atelier workshop kymco agility 4t 2t pdf drive parts catalog buyers guide azmotors wayback backup external resource reference' },
+    { title: 'Documents', url: prefix + 'documents.html', keywords: 'documents official papers driver manual owner handbook maintenance passport passeport entretien warranty garantie service stamp pdf scan original came with scooter specifications schedule' }
   ];
 
   document.addEventListener('input', function(e) {
