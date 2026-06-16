@@ -89,7 +89,7 @@
       <tr><th>Parameter</th><th>Unit</th><th>Normal Range</th><th>Durability Alert Threshold</th></tr>
     </thead>
     <tbody>
-      <tr><td>Engine RPM</td><td>RPM</td><td>2,000&plusmn;100 idle</td><td>&gt;6,500 sustained = accelerated wear</td></tr>
+      <tr><td>Engine RPM</td><td>RPM</td><td>1,700&plusmn;100 idle</td><td>&gt;6,500 sustained = accelerated wear</td></tr>
       <tr><td>Engine Temp (EWT)</td><td>&deg;C</td><td>80-120</td><td>&gt;130 = oil degradation, &gt;165 = DTC P0217</td></tr>
       <tr><td>TPS Position</td><td>%</td><td>0-100</td><td>Erratic readings = sensor failure approaching</td></tr>
       <tr><td>O2 Sensor Voltage</td><td>V</td><td>0.2-0.6</td><td>Drift outside range = AFR issue = carbon buildup</td></tr>
@@ -154,7 +154,7 @@
   <p>Plot RPM vs speed over time. A healthy CVT has a predictable curve. If RPM-at-max-speed creeps upward over weeks &rarr; variator rollers are wearing flat &rarr; belt isn't shifting fully. Regression analysis detects this before you feel it.</p>
 
   <h3>Rule 5: Idle Stability Scoring</h3>
-  <p>Measure RPM variance at idle (should be 2,000&plusmn;100 RPM). High variance &rarr; carburetor issue, vacuum leak, or valve clearance problem. Correlate with idle solenoid PWM — if PWM climbs toward 90%+ while idle variance increases &rarr; pilot jet clogging.</p>
+  <p>Measure RPM variance at idle (should be 1,700&plusmn;100 RPM). High variance &rarr; carburetor issue, vacuum leak, or valve clearance problem. Correlate with idle solenoid PWM — if PWM climbs toward 90%+ while idle variance increases &rarr; pilot jet clogging.</p>
 
   <h3>Rule 6: Battery Voltage Trend</h3>
   <p>Track running voltage over weeks. Healthy: 13.0-14.5V while engine running. If trend drops below 13V progressively &rarr; regulator/rectifier degrading &rarr; battery will die soon. Predict failure 2-4 weeks before it happens.</p>
