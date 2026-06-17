@@ -1,5 +1,5 @@
 # Kymco Agility 50 4T — Marrakech Wiki — AI Context File
-_Last synced: 2026-06-16 @ 62dde57_
+_Last synced: 2026-06-16 @ dc907d7_
 
 ## 1. What This Is (Plain English)
 - **In one sentence:** A static website that's basically a personal maintenance manual for my Kymco Agility 50 4T scooter, tuned for Marrakech's heat and dust.
@@ -24,7 +24,7 @@ _Last synced: 2026-06-16 @ 62dde57_
 - `wiki/nav.js` — The only real logic. Injects the nav bar on every page, resolves the `wiki/` vs root path prefix (`wiki/nav.js:5`), theme toggle (dark/light, saved to `localStorage`), a client-side search index, and auto-anchors on `h2`/`h3` (`wiki/nav.js:118`). **Add a page → register it in BOTH `pages` (`wiki/nav.js:19`, the menu) and `searchIndex` (`wiki/nav.js:73`, search).**
 - `wiki/style.css` — All styling. CSS variables drive the dark/light themes (`wiki/style.css:3` and `:21`). Single source of truth for visuals; includes the document-card / PDF-preview styles used by the Documents page.
 - `wiki/maintenance.html` — Service intervals in two columns: **Marrakech-adjusted** vs **factory** (`Intervalle usine`). The factory column mirrors the official Kymco driver's-manual chart (p.39). Most-referenced page; canonical for intervals.
-- `wiki/specs.html` — Technical specs. As of 2026-06-16 these match the **official factory spec sheet** (driver's manual p.40); fluids/plug list the **OEM** grade (15W-40 API SF, Champion P-RZ9HC), with the Marrakech alternatives cross-referenced to the maintenance page. (K-Line connector/PID content was moved out — see Diagnostics.)
+- `wiki/specs.html` — Technical specs. As of 2026-06-16 these match the **official factory spec sheet** (driver's manual p.40); fluids/plug list the **OEM** grade (15W-40 API SF, Champion P-RZ9HC), with the Marrakech alternatives cross-referenced to the maintenance page. Mechanical service limits (brake disc 3.0 mm, drum, belt width) and exact torque values come from the **workshop/atelier manual** (KN10 platform — engineering data the driver's manual omits). K-Line connector/PID content was moved out — see Diagnostics.
 - `wiki/documents.html` — Opens the two official PDFs that came with the bike (driver's manual + maintenance passport) as cards with cover thumbnails and an on-demand inline PDF preview. Deliberately links files from `guides-docs/`.
 - `wiki/manuals.html` — External/reference index: user + workshop manuals (4T / 2T / 125), parts catalogs, Wayback backups, and local copies in `guides-docs/`.
 - `wiki/oil-systems.html` — Critical content: two separate oil systems (engine 10W-40 / gear 80W-90). Mixing them is the #1 user error.
@@ -57,7 +57,7 @@ _Last synced: 2026-06-16 @ 62dde57_
 - **Filenames with spaces / parentheses** in `guides-docs/` (and the root `idea*.md`). Quote them in shell, URL-encode when linking, and don't auto-rename without checking references in `documents.html` / `manuals.html`.
 
 ## 7. Current State
-- **Last shipped:** PR #30 (branch `claude/kind-pasteur-g24i8u`) — new **Documents** page for the two official PDFs (cover thumbnails + lazy inline preview); `specs.html` synced to the official driver's-manual spec sheet with fluids reverted to OEM; `maintenance.html` factory column rewritten to match the manual chart; `diagnostics.html` idle synced to 1,700 rpm; K-Line connector/PID block removed from `specs.html` (it lives on `diagnostics.html`).
+- **Last shipped:** PR #30 (branch `claude/kind-pasteur-g24i8u`) — new **Documents** page for the two official PDFs (cover thumbnails + lazy inline preview); `specs.html` synced to the official driver's-manual spec sheet with fluids reverted to OEM; `maintenance.html` factory column rewritten to match the manual chart; `diagnostics.html` idle synced to 1,700 rpm; K-Line connector/PID block removed from `specs.html`; then added workshop-manual service limits + exact torque values to `specs.html` (brake disc 3.0 mm, rear axle 108-127 N·m, belt width 17.5/16.5 mm, etc.).
 - **Working on now:** This `CONTEXT.md` refresh.
 - **Next up:**
   1. Decide whether the Marrakech air-filter *replace* interval (5,000 km) should be shortened — it's currently longer than the manual's 2,000 km.

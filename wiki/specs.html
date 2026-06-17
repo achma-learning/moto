@@ -17,7 +17,7 @@
 
   <div class="callout callout-info">
     <strong>Source</strong>
-    Core figures are verified against the official Kymco Agility 50 <a href="documents.html">Driver's Manual</a> (Specifications, p.&nbsp;40). Fluid grades below are the <em>factory</em> specification; the <a href="maintenance.html">Maintenance Schedule</a> carries the Marrakech-recommended alternatives (e.g. 10W-40 oil, colder spark plug) for sustained heat.
+    Core figures are verified against the official Kymco Agility 50 <a href="documents.html">Driver's Manual</a> (Specifications, p.&nbsp;40). Mechanical service limits and torque values are from the Kymco workshop (atelier) manual &mdash; shared across the KN10 platform, since the driver's manual doesn't list them. Fluid grades below are the <em>factory</em> specification; the <a href="maintenance.html">Maintenance Schedule</a> carries the Marrakech-recommended alternatives (e.g. 10W-40 oil, colder spark plug) for sustained heat.
   </div>
 
   <!-- Engine -->
@@ -27,9 +27,12 @@
     <div class="spec-item"><span class="label">Displacement</span><span class="value">49.5 cc</span></div>
     <div class="spec-item"><span class="label">Bore x Stroke</span><span class="value">39.0 x 41.4 mm</span></div>
     <div class="spec-item"><span class="label">Compression Ratio</span><span class="value">11:1</span></div>
+    <div class="spec-item"><span class="label">Compression Pressure</span><span class="value">15 &plusmn; 2 kg/cm&sup2; (~14.7 bar)</span></div>
     <div class="spec-item"><span class="label">Max Power</span><span class="value">2.6 kW (3.5 HP) @ 7,500 RPM</span></div>
     <div class="spec-item"><span class="label">Max Torque</span><span class="value">3.4 N&middot;m (0.35 kgf&middot;m) @ 7,000 RPM</span></div>
     <div class="spec-item"><span class="label">Idle Speed</span><span class="value">1,700 RPM</span></div>
+    <div class="spec-item"><span class="label">Ignition Timing</span><span class="value">BTDC 12&deg; @ 2,000 RPM (advances to ~25&deg;)</span></div>
+    <div class="spec-item"><span class="label">Throttle Free Play</span><span class="value">2-6 mm</span></div>
     <div class="spec-item"><span class="label">Fuel System</span><span class="value">Keihin CVK carburetor</span></div>
     <div class="spec-item"><span class="label">Ignition</span><span class="value">CDI (Capacitor Discharge Ignition)</span></div>
     <div class="spec-item"><span class="label">ECU</span><span class="value">Dellorto LDC8, 16-bit</span></div>
@@ -56,9 +59,10 @@
     <div class="spec-item"><span class="label">Clutch</span><span class="value">Centrifugal, dry</span></div>
     <div class="spec-item"><span class="label">Clutch Engagement RPM</span><span class="value">~3,500-4,000 RPM</span></div>
     <div class="spec-item"><span class="label">Final Drive</span><span class="value">Gear reduction (sealed oil bath)</span></div>
-    <div class="spec-item"><span class="label">Variator Rollers</span><span class="value">6 pcs, ~6-7 grams each</span></div>
-    <div class="spec-item"><span class="label">Belt Width (new)</span><span class="value">~18.5 mm</span></div>
-    <div class="spec-item"><span class="label">Belt Wear Limit</span><span class="value">&lt;17.5 mm = replace</span></div>
+    <div class="spec-item"><span class="label">Variator Rollers</span><span class="value">6 pcs, ~6-7 g each &bull; roller O.D. ~16 mm</span></div>
+    <div class="spec-item"><span class="label">Belt Width (new)</span><span class="value">17.5 mm</span></div>
+    <div class="spec-item"><span class="label">Belt Wear Limit</span><span class="value">&lt;16.5 mm = replace</span></div>
+    <div class="spec-item"><span class="label">Clutch Lining Wear Limit</span><span class="value">&lt;2.0 mm = replace</span></div>
   </div>
 
   <!-- Fluids -->
@@ -108,15 +112,21 @@
       <tr><th>Fastener</th><th>Torque (Nm)</th><th>Notes</th></tr>
     </thead>
     <tbody>
-      <tr><td>Engine oil drain plug</td><td>~25 Nm</td><td>Replace copper washer each time</td></tr>
-      <tr><td>Gear oil drain plug</td><td>8-12 Nm</td><td>Replace aluminum washer each time. Workshop manual: 0.8-1.2 kgf&middot;m</td></tr>
-      <tr><td>Spark plug</td><td>~12 Nm</td><td>Hand-tight + 1/4 turn if no torque wrench</td></tr>
-      <tr><td>Variator nut</td><td>~40-45 Nm</td><td>Use holding tool or impact wrench</td></tr>
-      <tr><td>Clutch nut</td><td>~40-45 Nm</td><td>Use holding tool or impact wrench</td></tr>
-      <tr><td>Cylinder head bolts</td><td>~10-12 Nm</td><td>Tighten in star pattern, 2 stages</td></tr>
-      <tr><td>Brake caliper bolts</td><td>~25-30 Nm</td><td>Apply threadlocker if not already present</td></tr>
-      <tr><td>Wheel axle nut (front)</td><td>~50 Nm</td><td>Replace cotter pin after tightening</td></tr>
-      <tr><td>Wheel axle nut (rear)</td><td>~60 Nm</td><td>Check for play before tightening</td></tr>
+      <tr><td>Engine oil drain bolt</td><td>11-15 Nm</td><td>1.1-1.5 kgf&middot;m. Replace sealing washer each time</td></tr>
+      <tr><td>Oil filter screen cap</td><td>10-20 Nm</td><td>1.0-2.0 kgf&middot;m (30 mm cap)</td></tr>
+      <tr><td>Gear oil drain bolt</td><td>8-12 Nm</td><td>~0.8-1.2 kgf&middot;m. Replace washer each time</td></tr>
+      <tr><td>Spark plug</td><td>10-14 Nm</td><td>1.0-1.4 kgf&middot;m. Hand-tight + 1/4 turn if no wrench</td></tr>
+      <tr><td>Cylinder head flange nut</td><td>12-16 Nm</td><td>1.2-1.6 kgf&middot;m. Apply oil to threads; star pattern</td></tr>
+      <tr><td>Cylinder head bolts A/B</td><td>7-11 Nm</td><td>0.7-1.1 kgf&middot;m (M6)</td></tr>
+      <tr><td>Valve adjuster lock nut</td><td>0.7-0.9 Nm</td><td>0.07-0.09 kgf&middot;m</td></tr>
+      <tr><td>Variator (drive face) nut</td><td>54-64 Nm</td><td>5.5-6.5 kgf&middot;m. Use holding tool or impact wrench</td></tr>
+      <tr><td>Clutch drive-plate nut</td><td>49-59 Nm</td><td>5.0-6.0 kgf&middot;m (39 mm nut)</td></tr>
+      <tr><td>Clutch outer nut</td><td>34-44 Nm</td><td>3.5-4.5 kgf&middot;m</td></tr>
+      <tr><td>Wheel axle nut (front)</td><td>49-69 Nm</td><td>5.0-7.0 kgf&middot;m. U-nut &mdash; replace</td></tr>
+      <tr><td>Wheel axle nut (rear)</td><td>108-127 Nm</td><td>11-13 kgf&middot;m. U-nut &mdash; replace</td></tr>
+      <tr><td>Steering stem lock nut</td><td>78-118 Nm</td><td>8-12 kgf&middot;m (U-nut)</td></tr>
+      <tr><td>Brake pad pin bolt</td><td>15-20 Nm</td><td>1.5-2.0 kgf&middot;m</td></tr>
+      <tr><td>Brake caliper bracket bolts</td><td>24-29 Nm</td><td>2.4-3.0 kgf&middot;m (M8 flange, standard torque)</td></tr>
     </tbody>
   </table>
 
@@ -135,9 +145,12 @@
   <div class="spec-list">
     <div class="spec-item"><span class="label">Front Brake</span><span class="value">Hydraulic disc, single piston caliper</span></div>
     <div class="spec-item"><span class="label">Rear Brake</span><span class="value">Drum brake</span></div>
-    <div class="spec-item"><span class="label">Front Disc Diameter</span><span class="value">~200 mm</span></div>
-    <div class="spec-item"><span class="label">Min Disc Thickness</span><span class="value">Check workshop manual for limit</span></div>
-    <div class="spec-item"><span class="label">Min Pad Thickness</span><span class="value">1.0 mm</span></div>
+    <div class="spec-item"><span class="label">Front Disc Diameter</span><span class="value">180 mm</span></div>
+    <div class="spec-item"><span class="label">Front Disc Min Thickness</span><span class="value">3.0 mm (replace below) &bull; runout limit 0.3 mm</span></div>
+    <div class="spec-item"><span class="label">Min Pad Thickness</span><span class="value">1.0 mm (or at wear groove)</span></div>
+    <div class="spec-item"><span class="label">Rear Drum Diameter</span><span class="value">110 mm (wear limit 111 mm)</span></div>
+    <div class="spec-item"><span class="label">Rear Shoe Lining</span><span class="value">4.0 mm new &bull; 2.0 mm wear limit</span></div>
+    <div class="spec-item"><span class="label">Brake Lever Free Play</span><span class="value">10-20 mm (front &amp; rear)</span></div>
     <div class="spec-item"><span class="label">Brake Fluid</span><span class="value">DOT 4</span></div>
   </div>
 
@@ -157,6 +170,7 @@
   <div class="spec-list">
     <div class="spec-item"><span class="label">Overall L &times; W &times; H</span><span class="value">1,830 &times; 690 &times; 1,130 mm</span></div>
     <div class="spec-item"><span class="label">Wheelbase</span><span class="value">1,325 mm</span></div>
+    <div class="spec-item"><span class="label">Ground Clearance</span><span class="value">110 mm</span></div>
     <div class="spec-item"><span class="label">Seat Height</span><span class="value">~760 mm</span></div>
     <div class="spec-item"><span class="label">Dry Weight</span><span class="value">92.5 kg</span></div>
     <div class="spec-item"><span class="label">Max Load</span><span class="value">150 kg</span></div>
@@ -206,7 +220,7 @@
 </main>
 
 <footer>
-  Kymco Agility 50 4T — Marrakech Maintenance Wiki &bull; Last updated: <time datetime="2026-04">April 2026</time>
+  Kymco Agility 50 4T — Marrakech Maintenance Wiki &bull; Last updated: <time datetime="2026-06">June 2026</time>
 </footer>
 
 </body>
