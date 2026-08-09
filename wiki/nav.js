@@ -26,6 +26,7 @@
     { href: prefix + 'oil-systems.html', label: 'Oil Systems', file: 'oil-systems.html' },
     { href: prefix + 'failure-modes.html', label: 'Failure Modes', file: 'failure-modes.html' },
     { href: prefix + 'parts.html', label: 'Parts', file: 'parts.html' },
+    { href: prefix + 'equipement.html', label: 'Équipement', file: 'equipement.html' },
     { href: prefix + 'seasonal.html', label: 'Seasonal', file: 'seasonal.html' },
     { href: prefix + 'manuals.html', label: 'Manuals', file: 'manuals.html' },
     { href: prefix + 'documents.html', label: 'Documents', file: 'documents.html' }
@@ -78,7 +79,8 @@
     { title: 'Specifications', url: prefix + 'specs.html', keywords: 'specs specifications engine valve torque fluids oil tire brake electrical battery fuse dimensions weight oem factory marrakech' },
     { title: 'Oil Systems', url: prefix + 'oil-systems.html', keywords: 'oil engine gear transmission 10w40 80w90 drain plug two systems' },
     { title: 'Failure Modes', url: prefix + 'failure-modes.html', keywords: 'failure mode risk cvt variator roller clutch spring valve guide carburetor pilot jet brake caliper piston starter motor brush' },
-    { title: 'Parts & Prices', url: prefix + 'parts.html', keywords: 'parts price cost dhs buy shop marjane jumia aliexpress becanerie tools oil filter plug belt roller' },
+    { title: 'Parts & Prices', url: prefix + 'parts.html', keywords: 'parts price cost dhs buy shop marjane jumia aliexpress becanerie tools oil filter plug belt roller atelier garage warranty garantie mob shop youka revente resale avito occasion' },
+    { title: 'Équipement & Accessoires', url: prefix + 'equipement.html', keywords: 'equipement accessoires accessory gear casque helmet ece jet visiere gants gloves veste jacket antivol lock gilet visibility reflechissant top case givi b29 monolock dosseret backrest pare-brise windscreen 440a 441a tapis mat support telephone phone holder dashcam housse cover lunettes sunglasses budget' },
     { title: 'Seasonal Maintenance', url: prefix + 'seasonal.html', keywords: 'seasonal summer winter heat cold ramadan storage dust rain transition' },
     { title: 'Manuals & External Resources', url: prefix + 'manuals.html', keywords: 'manuals manual user atelier workshop kymco agility 4t 2t pdf drive parts catalog buyers guide azmotors wayback backup external resource reference' },
     { title: 'Documents', url: prefix + 'documents.html', keywords: 'documents official papers driver manual owner handbook maintenance passport passeport entretien warranty garantie service stamp pdf scan original came with scooter specifications schedule' }

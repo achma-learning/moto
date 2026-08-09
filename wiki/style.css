@@ -421,9 +421,36 @@ tr:hover { background: rgba(233, 69, 96, 0.05); }
 .callout-success { border-color: var(--success); background: rgba(46,204,113,0.08); }
 .callout-info    { border-color: var(--info);    background: rgba(52,152,219,0.08); }
 
+/* Content links had no colour rule, so they fell back to the browser default
+   dark blue — unreadable on the dark theme. .card a / .callout a override this. */
+main a {
+  color: var(--accent-blue);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+main a:hover {
+  color: var(--accent-warm);
+}
+
+/* Only the leading <strong> acts as the callout title; inline emphasis in the
+   body (and in list items) must stay inline or it breaks the sentence apart. */
 .callout strong {
+  display: inline;
+  margin-bottom: 0;
+}
+
+.callout > strong:first-child {
   display: block;
   margin-bottom: 0.3rem;
+}
+
+/* Inherit body colour so links stay legible on every callout tint, in both themes. */
+.callout a {
+  color: inherit;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
 /* ---- Steps / Procedure lists ---- */
