@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 210" role="img" aria-label="Conditions Générales Assur'Auto — document d'assurance">
+  <rect width="320" height="210" fill="#16213e"/>
+  <g opacity="0.5" stroke="#0f3460" stroke-width="1">
+    <line x1="0" y1="35" x2="320" y2="35"/>
+    <line x1="0" y1="70" x2="320" y2="70"/>
+    <line x1="0" y1="105" x2="320" y2="105"/>
+    <line x1="0" y1="140" x2="320" y2="140"/>
+    <line x1="0" y1="175" x2="320" y2="175"/>
+  </g>
+  <!-- sheet -->
+  <rect x="86" y="26" width="148" height="158" rx="6" fill="#0f3460" stroke="#e94560" stroke-width="2"/>
+  <g stroke="#8899aa" stroke-width="4" stroke-linecap="round" opacity="0.55">
+    <line x1="104" y1="118" x2="216" y2="118"/>
+    <line x1="104" y1="132" x2="216" y2="132"/>
+    <line x1="104" y1="146" x2="186" y2="146"/>
+  </g>
+  <!-- shield -->
+  <path d="M160 44 L192 56 V88 c0 20 -14 33 -32 40 c-18 -7 -32 -20 -32 -40 V56 Z"
+        fill="none" stroke="#e94560" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M146 88 l10 11 l20 -23" fill="none" stroke="#f5a623" stroke-width="3.5"
+        stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="160" y="172" text-anchor="middle" font-family="Georgia, serif" font-size="15"
+        letter-spacing="2" fill="#e0e0e0">ASSUR'AUTO</text>
+</svg>
