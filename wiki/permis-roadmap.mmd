@@ -1,24 +1,31 @@
 flowchart TD
     START(["Départ · 18 ans"]) --> B
 
-    B["<b>Étape 1 · Permis B</b><br/>Voiture ≤ 3,5 t<br/>2 250 dhs HT"]
-    A["<b>Étape 2 · Permis A</b><br/>Toutes les motos<br/>2 100 dhs HT"]
-    C["<b>Étape 3 · Permis C</b><br/>Camion 3,5 t et plus<br/>4 150 dhs HT"]
-    EC["<b>Étape 4 · Permis E(C)</b><br/>Semi-remorque<br/>4 150 dhs HT"]
-    D["<b>Étape 5 · Permis D</b><br/>Autocar 9 places et plus<br/>4 150 dhs HT"]
-    ED["<b>Étape 6 · Permis E(D)</b><br/>Autocar + remorque<br/>0 dhs · par équivalence"]
+    subgraph SOCLE ["◆ SOCLE INDISPENSABLE — A + B + C"]
+    direction TB
+        B["<b>1 · Permis B</b><br/>Voiture ≤ 3,5 t<br/>2 250 dhs HT"]
+        A["<b>2 · Permis A</b><br/>Toutes les motos<br/>2 100 dhs HT"]
+        C["<b>3 · Permis C</b><br/>Camion 3,5 t et plus<br/>4 150 dhs HT"]
+    end
+
+    subgraph EXT ["◇ EXTENSIONS — selon le métier"]
+    direction TB
+        EC["<b>4 · Permis E(C)</b><br/>Semi-remorque<br/>4 150 dhs HT"]
+        D["<b>5 · Permis D</b><br/>Autocar 9 places et plus<br/>4 150 dhs HT"]
+    end
+
+    B -->|"dans la foulée"| A
+    A -->|"21 ans · B post-probatoire ≥ 12 pts"| C
+    C -->|"si le métier l'exige"| EC
+    EC --> D
 
     AM(["AM · cyclomoteur 50"])
     A1(["A1 · moto 125"])
     EB(["E(B) · remorque lourde"])
+    ED(["E(D) · autocar + remorque"])
 
-    B -->|"dans la foulée"| A
-    A -->|"21 ans · B post-probatoire ≥ 12 pts"| C
-    C -->|"en option"| EC
-    EC -->|"si le métier l'exige"| D
-
-    B -.->|"offert"| AM
-    A -.->|"offert"| A1
-    EC -.->|"équivalence si vous détenez B"| EB
-    EC -.->|"équivalence"| ED
-    D -.->|"une fois D obtenu"| ED
+    B -.->|"acquis · 0 dhs"| AM
+    A -.->|"acquis · 0 dhs"| A1
+    EC -.->|"acquis si B · 0 dhs"| EB
+    EC -.->|"acquis si D · 0 dhs"| ED
+    D -.-> ED
